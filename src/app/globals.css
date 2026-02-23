@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply antialiased bg-white text-zinc-900;
+  font-family: var(--font-inter), var(--font-noto-sans-thai), sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-emerald-500;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-green-400;
+  }
+
+  .text-gradient-pink {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-pink-300;
+  }
+
+  .glow-emerald {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+  }
+
+  .glow-emerald:hover {
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.6);
+  }
+
+  .section-pad {
+    @apply py-20 px-4 md:px-8 lg:px-16;
+  }
+
+  .container-narrow {
+    @apply max-w-6xl mx-auto;
+  }
+}

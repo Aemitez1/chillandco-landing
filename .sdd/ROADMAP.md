@@ -10,21 +10,21 @@
 
 ---
 
-## 🟢 Sprint 1: Project Setup (Progress: 0%)
+## 🟢 Sprint 1: Project Setup (Progress: 100%)
 **Goal:** Initialize repo, configure tools, setup deploy pipeline
 
-- [ ] **1.1 Repository Init**
-    - [ ] `npx create-next-app@latest chillandco-landing --typescript --tailwind --app`
-    - [ ] สร้าง `.sdd/` folder และ copy SDD files
-    - [ ] สร้าง `src/data/content.ts` (copy จาก `landing-content.ts`)
-    - [ ] Copy `logo.jpg` จาก `go-line-ai-bot/frontend/public/`
-    - [ ] Copy dashboard screenshots จาก `go-line-ai-bot/frontend/screenshots/`
+- [x] **1.1 Repository Init**
+    - [x] `npx create-next-app@latest chillandco-landing --typescript --tailwind --app`
+    - [x] สร้าง `.sdd/` folder และ copy SDD files
+    - [x] สร้าง `src/data/content.ts` (copy จาก `landing-content.ts`)
+    - [x] Copy `logo.jpg` จาก `go-line-ai-bot/frontend/public/`
+    - [x] Copy dashboard screenshots จาก `go-line-ai-bot/frontend/screenshots/`
 
-- [ ] **1.2 Dependencies**
-    - [ ] `npm install framer-motion lucide-react`
-    - [ ] `npm install @next/font` (ถ้าใช้ Next.js < 14)
-    - [ ] ตั้งค่า Tailwind: เพิ่ม custom colors (pink, emerald, zinc)
-    - [ ] สร้าง `src/lib/utils.ts` (cn helper)
+- [x] **1.2 Dependencies**
+    - [x] `npm install framer-motion lucide-react`
+    - [x] `npm install @next/font` (ถ้าใช้ Next.js < 14)
+    - [x] ตั้งค่า Tailwind: เพิ่ม custom colors (pink, emerald, zinc)
+    - [x] สร้าง `src/lib/utils.ts` (cn helper)
 
 - [ ] **1.3 Vercel Setup**
     - [ ] Push to GitHub (`chillandco-landing` repo)
@@ -32,63 +32,63 @@
     - [ ] ตั้งค่า Custom Domain: `www.chillandcostudio.com`
     - [ ] ทดสอบ auto-deploy pipeline
 
-- [ ] **1.4 Base Layout**
-    - [ ] `src/app/layout.tsx` — fonts, metadata, viewport
-    - [ ] `src/app/globals.css` — Tailwind directives + base styles
-    - [ ] `src/components/layout/Navbar.tsx` — with LINE CTA button
-    - [ ] `src/components/layout/Footer.tsx`
+- [x] **1.4 Base Layout**
+    - [x] `src/app/layout.tsx` — fonts, metadata, viewport
+    - [x] `src/app/globals.css` — Tailwind directives + base styles
+    - [x] `src/components/layout/Navbar.tsx` — with LINE CTA button
+    - [x] `src/components/layout/Footer.tsx`
 
 ---
 
-## 🟡 Sprint 2: Core Sections (Progress: 0%)
+## 🟡 Sprint 2: Core Sections (Progress: 100%)
 **Goal:** Build and connect main landing sections ให้ครบ
 
-- [ ] **2.1 Hero Section**
-    - [ ] `HeroSection.tsx` — headline, badge, CTA buttons
-    - [ ] Mobile-first layout (stack vertically on mobile)
-    - [ ] Animated headline (Framer Motion fadeIn)
+- [x] **2.1 Hero Section**
+    - [x] `HeroSection.tsx` — headline, badge, CTA buttons
+    - [x] Mobile-first layout (stack vertically on mobile)
+    - [x] Animated headline (Framer Motion fadeIn)
 
-- [ ] **2.2 Stats Bar**
-    - [ ] `StatsBar.tsx` — 4 stat items จาก `content.ts`
-    - [ ] Counter animation เมื่อ scroll เข้ามา
+- [x] **2.2 Stats Bar**
+    - [x] `StatsBar.tsx` — 4 stat items จาก `content.ts`
+    - [x] Counter animation เมื่อ scroll เข้ามา
 
-- [ ] **2.3 Features Section**
-    - [ ] `FeaturesSection.tsx` — grid 8 cards
-    - [ ] `FeatureCard.tsx` — reusable atom
-    - [ ] Stagger animation (cards โผล่ทีละตัว)
+- [x] **2.3 Features Section**
+    - [x] `FeaturesSection.tsx` — grid 8 cards
+    - [x] `FeatureCard.tsx` — reusable atom
+    - [x] Stagger animation (cards โผล่ทีละตัว)
 
-- [ ] **2.4 How It Works**
-    - [ ] `HowItWorksSection.tsx` — 5-step timeline
-    - [ ] `StepCard.tsx` — numbered step component
-    - [ ] Desktop: horizontal | Mobile: vertical
+- [x] **2.4 How It Works**
+    - [x] `HowItWorksSection.tsx` — 5-step timeline
+    - [x] `StepCard.tsx` — numbered step component
+    - [x] Desktop: horizontal | Mobile: vertical
 
-- [ ] **2.5 Dashboard Preview**
-    - [ ] `DashboardSection.tsx`
-    - [ ] Device frame mockup (desktop + mobile screenshot)
-    - [ ] Feature bullet list ด้านข้าง
+- [x] **2.5 Dashboard Preview**
+    - [x] `DashboardSection.tsx`
+    - [x] Device frame mockup (desktop + mobile screenshot)
+    - [x] Feature bullet list ด้านข้าง
 
 ---
 
-## 🟠 Sprint 3: Conversion Sections (Progress: 0%)
+## 🟠 Sprint 3: Conversion Sections (Progress: 100%)
 **Goal:** Complete pricing, FAQ, and final CTA
 
-- [ ] **3.1 Knowledge Base Section**
-    - [ ] `KnowledgeBaseSection.tsx` — 4 tab cards
-    - [ ] Interactive tab switching animation
+- [x] **3.1 Knowledge Base Section**
+    - [x] `KnowledgeBaseSection.tsx` — 4 tab cards
+    - [x] Interactive tab switching animation
 
-- [ ] **3.2 Pricing Section**
-    - [ ] `PricingSection.tsx` — 2 plan cards
-    - [ ] `PricingCard.tsx` — highlighted "Professional" card
-    - [ ] กรอกราคาจริงใน `content.ts` ก่อน deploy
+- [x] **3.2 Pricing Section**
+    - [x] `PricingSection.tsx` — 2 plan cards
+    - [x] `PricingCard.tsx` — highlighted "Professional" card
+    - [x] กรอกราคาจริงใน `content.ts` ก่อน deploy
 
-- [ ] **3.3 FAQ Section**
-    - [ ] `FAQSection.tsx` — Accordion 5 ข้อ
-    - [ ] `FAQItem.tsx` — open/close animation
-    - [ ] JSON-LD structured data สำหรับ SEO
+- [x] **3.3 FAQ Section**
+    - [x] `FAQSection.tsx` — Accordion 5 ข้อ
+    - [x] `FAQItem.tsx` — open/close animation
+    - [x] JSON-LD structured data สำหรับ SEO
 
-- [ ] **3.4 Final CTA Section**
-    - [ ] `CTASection.tsx` — Full-width CTA block
-    - [ ] เชื่อม LINE Add Friend URL
+- [x] **3.4 Final CTA Section**
+    - [x] `CTASection.tsx` — Full-width CTA block
+    - [x] เชื่อม LINE Add Friend URL
 
 ---
 
