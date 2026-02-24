@@ -77,8 +77,8 @@
     - [x] Interactive tab switching animation
 
 - [x] **3.2 Pricing Section**
-    - [x] `PricingSection.tsx` — 2 plan cards
-    - [x] `PricingCard.tsx` — highlighted "Professional" card
+    - [x] `PricingSection.tsx` — 3 plan cards
+    - [x] `PricingCard.tsx` — highlighted "Growth" card
     - [x] กรอกราคาจริงใน `content.ts` ก่อน deploy
 
 - [x] **3.3 FAQ Section**

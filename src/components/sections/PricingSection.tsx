@@ -44,7 +44,7 @@ export default function PricingSection() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
-                    className="w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch relative"
+                    className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch relative"
                 >
                     {pricing.plans.map((plan, idx) => (
                         <motion.div

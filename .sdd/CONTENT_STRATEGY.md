@@ -47,8 +47,8 @@ Primary CTA: **กดปุ่ม Add Friend LINE OA**
 
 ### 8. Pricing Section
 - **Goal:** Convert visitor ที่สนใจแล้วให้ตัดสินใจ
-- **Layout:** 2 cards side-by-side (Starter / Professional)
-- **Strategy:** Highlight Professional (แนะนำ badge)
+- **Layout:** 3 cards side-by-side (Starter / Growth / Pro)
+- **Strategy:** Highlight Growth (แนะนำ badge "คุ้มที่สุด")
 - **FAQ:** Accordion 5 ข้อ ตอบ objections หลัก
 
 ### 9. CTA Section (Final)
