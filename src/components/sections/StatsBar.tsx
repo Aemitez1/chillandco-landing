@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { stats } from "@/data/content";
+import AnimatedCounter from "@/components/ui/AnimatedCounter";
 
 export default function StatsBar() {
     const containerVariants = {
@@ -33,10 +34,8 @@ export default function StatsBar() {
                             variants={itemVariants}
                             className="flex flex-col items-center justify-center text-center px-4"
                         >
-                            {/* Note: In a real app we might use Framer Motion's useMotionValue and animate for numbers,
-                  but for static landing page simplicity we render the static text first. */}
                             <span className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-emerald-400 mb-2">
-                                {stat.value}
+                                <AnimatedCounter value={stat.value} />
                             </span>
                             <span className="text-sm md:text-base text-zinc-400 font-medium">
                                 {stat.label}
