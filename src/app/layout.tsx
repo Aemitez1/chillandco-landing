@@ -59,8 +59,29 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const softwareAppSchema = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": brand.name,
+        "description": brand.description,
+        "operatingSystem": "Web",
+        "applicationCategory": "BusinessApplication",
+        "url": brand.url,
+        "offers": {
+            "@type": "Offer",
+            "price": "490",
+            "priceCurrency": "THB"
+        }
+    };
+
     return (
         <html lang="th" className={`${inter.variable} ${notoSansThai.variable}`}>
+            <head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}
+                />
+            </head>
             <body>
                 {children}
                 <FloatingContactButton />

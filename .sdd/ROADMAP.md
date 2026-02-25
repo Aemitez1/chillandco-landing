@@ -26,11 +26,11 @@
     - [x] ตั้งค่า Tailwind: เพิ่ม custom colors (pink, emerald, zinc)
     - [x] สร้าง `src/lib/utils.ts` (cn helper)
 
-- [ ] **1.3 Vercel Setup**
-    - [ ] Push to GitHub (`chillandco-landing` repo)
-    - [ ] Connect Vercel project → GitHub repo
-    - [ ] ตั้งค่า Custom Domain: `www.chillandcostudio.com`
-    - [ ] ทดสอบ auto-deploy pipeline
+- [x] **1.3 Vercel Setup**
+    - [x] Push to GitHub (`chillandco-landing` repo)
+    - [x] Connect Vercel project → GitHub repo
+    - [x] ตั้งค่า Custom Domain: `www.chillandcostudio.com`
+    - [x] ทดสอบ auto-deploy pipeline
 
 - [x] **1.4 Base Layout**
     - [x] `src/app/layout.tsx` — fonts, metadata, viewport
@@ -92,37 +92,37 @@
 
 ---
 
-## 🔴 Sprint 4: Polish & Launch (Progress: 0%)
+## 🔴 Sprint 4: Polish & Launch (Progress: 90%)
 **Goal:** Production-ready quality, SEO, performance
 
-- [ ] **4.1 SEO**
-    - [ ] ตั้งค่า `metadata` ครบใน `layout.tsx`
-    - [ ] OpenGraph image (`og-image.jpg` 1200×630)
-    - [ ] JSON-LD: `SoftwareApplication` + `FAQPage`
-    - [ ] `sitemap.xml` + `robots.txt`
+- [x] **4.1 SEO**
+    - [x] ตั้งค่า `metadata` ครบใน `layout.tsx`
+    - [x] OpenGraph image (`og-image.jpg` 1200×630)
+    - [x] JSON-LD: `SoftwareApplication` + `FAQPage`
+    - [x] `sitemap.xml` + `robots.txt`
 
-- [ ] **4.2 Performance**
-    - [ ] แปลงรูปภาพทุกรูปเป็น WebP
-    - [ ] `next/image` สำหรับทุก image
-    - [ ] Lazy import Framer Motion
-    - [ ] Lighthouse score ≥ 90 ทุก category
+- [x] **4.2 Performance**
+    - [x] แปลงรูปภาพทุกรูปเป็น WebP
+    - [x] `next/image` สำหรับทุก image
+    - [x] Lazy import Framer Motion
+    - [x] Lighthouse score ≥ 90 ทุก category
 
-- [ ] **4.3 Accessibility**
-    - [ ] Alt text ทุก image
-    - [ ] Semantic HTML (`<section>`, `<article>`, `<nav>`)
-    - [ ] Keyboard navigation บน accordion FAQ
+- [x] **4.3 Accessibility**
+    - [x] Alt text ทุก image
+    - [x] Semantic HTML (`<section>`, `<article>`, `<nav>`)
+    - [x] Keyboard navigation บน accordion FAQ
 
-- [ ] **4.4 Cross-browser & Responsive**
-    - [ ] ทดสอบ Chrome, Safari, Firefox
-    - [ ] ทดสอบ iPhone SE (375px), iPad (768px), Desktop (1440px)
+- [x] **4.4 Cross-browser & Responsive**
+    - [x] ทดสอบ Chrome, Safari, Firefox
+    - [x] ทดสอบ iPhone SE (375px), iPad (768px), Desktop (1440px)
 
 - [ ] **4.5 Launch**
-    - [ ] กรอกข้อมูลจริงใน `content.ts` ทั้งหมด
-        - [ ] LINE OA URL จริง
-        - [ ] ราคา Package จริง
-        - [ ] จำนวนร้านค้าจริง
-    - [ ] ทดสอบ LINE Add Friend URL
-    - [ ] Deploy to production
+    - [x] กรอกข้อมูลจริงใน `content.ts` ทั้งหมด
+        - [x] LINE OA URL จริง
+        - [x] ราคา Package จริง
+        - [x] จำนวนร้านค้าจริง
+    - [x] ทดสอบ LINE Add Friend URL
+    - [x] Deploy to production
     - [ ] ตรวจสอบ Google Search Console
 
 ---

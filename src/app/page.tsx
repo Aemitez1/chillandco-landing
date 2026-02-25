@@ -1,14 +1,16 @@
 import Navbar from "@/components/layout/Navbar";
 import HeroSection from "@/components/sections/HeroSection";
-import StatsBar from "@/components/sections/StatsBar";
-import FeaturesSection from "@/components/sections/FeaturesSection";
-import HowItWorksSection from "@/components/sections/HowItWorksSection";
-import DashboardSection from "@/components/sections/DashboardSection";
-import KnowledgeBaseSection from "@/components/sections/KnowledgeBaseSection";
-import PricingSection from "@/components/sections/PricingSection";
-import FAQSection from "@/components/sections/FAQSection";
-import CTASection from "@/components/sections/CTASection";
 import Footer from "@/components/layout/Footer";
+import dynamic from "next/dynamic";
+
+const StatsBar = dynamic(() => import("@/components/sections/StatsBar"), { ssr: true });
+const FeaturesSection = dynamic(() => import("@/components/sections/FeaturesSection"), { ssr: true });
+const HowItWorksSection = dynamic(() => import("@/components/sections/HowItWorksSection"), { ssr: true });
+const DashboardSection = dynamic(() => import("@/components/sections/DashboardSection"), { ssr: true });
+const KnowledgeBaseSection = dynamic(() => import("@/components/sections/KnowledgeBaseSection"), { ssr: true });
+const PricingSection = dynamic(() => import("@/components/sections/PricingSection"), { ssr: true });
+const FAQSection = dynamic(() => import("@/components/sections/FAQSection"), { ssr: true });
+const CTASection = dynamic(() => import("@/components/sections/CTASection"), { ssr: true });
 
 export default function Home() {
     return (

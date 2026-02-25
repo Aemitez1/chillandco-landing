@@ -21,7 +21,13 @@ export default function FAQItem({
             <button
                 type="button"
                 onClick={onToggle}
-                className="flex items-center justify-between w-full px-6 py-5 text-left focus:outline-none focus-visible:bg-zinc-50"
+                onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        onToggle();
+                    }
+                }}
+                className="flex items-center justify-between w-full px-6 py-5 text-left focus:outline-none focus-visible:bg-zinc-50 focus-visible:ring-2 focus-visible:ring-emerald-500 rounded-2xl"
                 aria-expanded={isOpen}
             >
                 <span className="text-lg font-bold text-zinc-900 pr-8">{question}</span>
