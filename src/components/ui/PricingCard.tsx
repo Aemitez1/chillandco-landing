@@ -1,6 +1,12 @@
 import { cn } from "@/lib/utils";
 import GlowButton from "@/components/ui/GlowButton";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, XCircle } from "lucide-react";
+
+interface FeatureItem {
+    key: string;
+    label: string;
+    isNew: boolean;
+}
 
 interface PricingCardProps {
     name: string;
@@ -8,7 +14,9 @@ interface PricingCardProps {
     price: number | null;
     priceLabel: string;
     limit: string;
-    features: string[];
+    targetDesc: string;
+    allFeatures: FeatureItem[];
+    includedFeatures: string[];
     cta: { label: string; url: string };
     highlight: boolean;
     badge?: string;
@@ -22,13 +30,17 @@ export default function PricingCard({
     price,
     priceLabel,
     limit,
-    features,
+    targetDesc,
+    allFeatures,
+    includedFeatures,
     cta,
     highlight,
     badge,
     currency,
     billingNote,
 }: PricingCardProps) {
+    const includedSet = new Set(includedFeatures);
+
     return (
         <div
             className={cn(
@@ -46,11 +58,14 @@ export default function PricingCard({
             )}
 
             {/* Header */}
-            <div className="flex flex-col gap-2 mb-6">
+            <div className="flex flex-col gap-1 mb-6">
                 <h3 className="text-xl font-bold text-zinc-900 flex items-center gap-2">
                     <span>{emoji}</span> {name}
                 </h3>
-                <p className="text-zinc-500 font-medium">{limit}</p>
+                <p className={cn("text-sm font-semibold", highlight ? "text-emerald-600" : "text-zinc-500")}>
+                    {limit}
+                </p>
+                <p className="text-xs text-zinc-400">{targetDesc}</p>
             </div>
 
             {/* Price */}
@@ -84,25 +99,53 @@ export default function PricingCard({
                 />
             </div>
 
-            {/* Features List */}
+            {/* Feature Comparison List */}
             <div className="mt-auto">
-                <p className="text-sm font-bold text-zinc-900 mb-4 uppercase tracking-wider">
+                <p className="text-xs font-bold text-zinc-400 mb-4 uppercase tracking-wider">
                     ฟีเจอร์ที่ได้รับ
                 </p>
-                <ul className="flex flex-col gap-4">
-                    {features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-3">
-                            <CheckCircle2
+                <ul className="flex flex-col gap-3">
+                    {allFeatures.map((feature) => {
+                        const included = includedSet.has(feature.key);
+                        return (
+                            <li
+                                key={feature.key}
                                 className={cn(
-                                    "w-5 h-5 shrink-0",
-                                    highlight ? "text-emerald-500" : "text-zinc-400"
+                                    "items-start gap-3",
+                                    included ? "flex" : "hidden sm:flex"
                                 )}
-                            />
-                            <span className="text-zinc-600 text-sm leading-tight">
-                                {feature}
-                            </span>
-                        </li>
-                    ))}
+                            >
+                                {included ? (
+                                    <CheckCircle2
+                                        className={cn(
+                                            "w-5 h-5 shrink-0 mt-0.5",
+                                            highlight ? "text-emerald-500" : "text-emerald-400"
+                                        )}
+                                    />
+                                ) : (
+                                    <XCircle className="w-5 h-5 shrink-0 mt-0.5 text-zinc-200" />
+                                )}
+                                <span
+                                    className={cn(
+                                        "text-sm leading-snug flex items-center gap-1.5 flex-wrap",
+                                        included ? "text-zinc-700" : "text-zinc-300"
+                                    )}
+                                >
+                                    {feature.label}
+                                    {feature.isNew && included && (
+                                        <span className="inline-flex items-center px-1.5 py-0.5 text-[10px] font-bold bg-amber-100 text-amber-700 rounded-full leading-none uppercase tracking-wide">
+                                            ใหม่
+                                        </span>
+                                    )}
+                                    {feature.isNew && !included && (
+                                        <span className="inline-flex items-center px-1.5 py-0.5 text-[10px] font-bold bg-zinc-100 text-zinc-400 rounded-full leading-none uppercase tracking-wide">
+                                            ใหม่
+                                        </span>
+                                    )}
+                                </span>
+                            </li>
+                        );
+                    })}
                 </ul>
             </div>
         </div>

@@ -34,6 +34,7 @@ export default function Navbar() {
                             src={brand.logoPath}
                             alt={brand.name}
                             fill
+                            sizes="32px"
                             className="object-cover"
                         />
                     </div>

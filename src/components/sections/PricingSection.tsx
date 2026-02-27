@@ -46,7 +46,7 @@ export default function PricingSection() {
                     viewport={{ once: true, amount: 0.2 }}
                     className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch relative"
                 >
-                    {pricing.plans.map((plan, idx) => (
+                    {pricing.plans.map((plan) => (
                         <motion.div
                             key={plan.name}
                             variants={itemVariants}
@@ -58,7 +58,9 @@ export default function PricingSection() {
                                 price={plan.price}
                                 priceLabel={plan.priceLabel}
                                 limit={plan.limit}
-                                features={plan.features}
+                                targetDesc={plan.targetDesc}
+                                allFeatures={pricing.allFeatures}
+                                includedFeatures={plan.includedFeatures}
                                 cta={plan.cta}
                                 highlight={plan.highlight}
                                 badge={plan.badge}

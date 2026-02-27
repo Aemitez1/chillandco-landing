@@ -86,43 +86,59 @@ export const features = {
     subtitle: "ครบครัน ได้ทั้งความเร็วและความแม่นยำ",
     items: [
         {
-            emoji: "🤖",
+            icon: "Bot",
+            iconColor: "text-emerald-600",
+            iconBg: "bg-emerald-50",
             title: "AI ตอบอัตโนมัติ 24/7",
             desc: "ตอบคำถามลูกค้าแบบ Real-time ไม่มีวันหยุด ไม่มี missed message",
             highlight: true,
         },
         {
-            emoji: "🎯",
+            icon: "Target",
+            iconColor: "text-violet-600",
+            iconBg: "bg-violet-50",
             title: "ตรวจจับ Intent อัจฉริยะ",
             desc: "วิเคราะห์ว่าลูกค้าต้องการ inquiry / buy / ต้องการแอดมิน แล้วตอบสนองต่างกัน",
         },
         {
-            emoji: "🆘",
+            icon: "ArrowRightLeft",
+            iconColor: "text-amber-600",
+            iconBg: "bg-amber-50",
             title: "One-Shot Handover",
             desc: "ตอบแล้วลูกค้ายังไม่ชัดเจน ส่งต่อแอดมินทันที ไม่ดึงเวลาลูกค้า",
         },
         {
-            emoji: "💬",
+            icon: "MessageCircle",
+            iconColor: "text-pink-600",
+            iconBg: "bg-pink-50",
             title: "บุคลิกสุภาพ เหมือนแอดมินจริง",
             desc: 'ใช้ "ค่ะ", "นะคะ" เสมอ สร้าง Brand Image ที่ดีให้ร้านคุณ',
         },
         {
-            emoji: "⚡",
+            icon: "Zap",
+            iconColor: "text-yellow-600",
+            iconBg: "bg-yellow-50",
             title: "ตอบเร็ว < 4 วินาที",
             desc: "Gemini ตอบใน 2-4 วินาที พร้อม Loading Animation ให้ลูกค้าเห็นว่ากำลังพิมพ์",
         },
         {
-            emoji: "🧠",
+            icon: "Brain",
+            iconColor: "text-blue-600",
+            iconBg: "bg-blue-50",
             title: "จำบทสนทนา",
             desc: "จำประวัติแชท 5 รายการล่าสุด ต่อเนื่อง ไม่ต้องถามซ้ำ",
         },
         {
-            emoji: "🌐",
+            icon: "Globe",
+            iconColor: "text-teal-600",
+            iconBg: "bg-teal-50",
             title: "รองรับหลายภาษา",
             desc: "ตรวจจับภาษาลูกค้าอัตโนมัติ ตอบได้ทั้งภาษาไทยและอังกฤษ",
         },
         {
-            emoji: "🔗",
+            icon: "Building2",
+            iconColor: "text-zinc-600",
+            iconBg: "bg-zinc-100",
             title: "Multi-Tenant SaaS",
             desc: "รองรับหลายร้านในระบบเดียว แต่ละร้านมี Channel Token และ Knowledge Base ของตัวเอง",
         },
@@ -207,6 +223,24 @@ export const knowledgeBase = {
     limit: "5,000 ตัวอักษรต่อหมวด",
 };
 
+// ─── Brand Ambassador ──────────────────────────────────────────────────────────
+
+export const ambassador = {
+    badge: "Brand Ambassador",
+    name: "รีโน่",
+    nameEn: "Reno",
+    title: "Content Creator & อินฟลูเอนเซอร์",
+    imagePath: "/images/brand-ambassador.png",
+    quote:
+        "พอใช้ Chill&Co Works ไป 1 เดือน ยอดขายเพิ่มขึ้นชัดเจนเลย เพราะ AI ตอบลูกค้าได้ตลอด 24 ชั่วโมง ไม่มีพลาด ไม่มี missed message อีกต่อไป",
+    highlights: [
+        { icon: "TrendingUp", label: "ยอดขายเพิ่ม", value: "+40%" },
+        { icon: "Clock", label: "ประหยัดเวลา", value: "3+ ชม./วัน" },
+        { icon: "MessageCircle", label: "ลูกค้าพึงพอใจ", value: "สูงขึ้นมาก" },
+    ],
+    cta: { label: "ทดลองใช้ฟรี 7 วัน", url: brand.lineAddFriendUrl },
+};
+
 // ─── Pricing ───────────────────────────────────────────────────────────────────
 
 export const pricing = {
@@ -214,6 +248,19 @@ export const pricing = {
     subtitle: "เลือกแพ็กเกจที่เหมาะกับขนาดธุรกิจของคุณ",
     currency: "THB",
     billingNote: "ราคายังไม่รวม VAT 7%",
+    // Feature registry — isNew = [NEW] feature (เพิ่มเพื่อสร้าง differentiation)
+    allFeatures: [
+        { key: "ai_24_7", label: "ตอบอัตโนมัติ 24/7", isNew: false },
+        { key: "dashboard", label: "Dashboard จัดการลูกค้า", isNew: false },
+        { key: "handover", label: "Auto Handover ส่งต่อแอดมิน", isNew: false },
+        { key: "line_notify", label: "แจ้งเตือนกลุ่ม LINE Admin", isNew: false },
+        { key: "trial", label: "ทดลองใช้ฟรี 7 วัน", isNew: false },
+        { key: "support_std", label: "Support ทั่วไป (ตอบภายใน 24 ชม.)", isNew: false },
+        { key: "priority_support", label: "Priority Support", isNew: true },
+        { key: "usage_report", label: "Monthly Usage Report", isNew: true },
+        { key: "multi_admin", label: "Multi-Admin Group (แจ้งได้หลายกลุ่ม)", isNew: true },
+        { key: "onboarding", label: "Dedicated Onboarding (Setup 1-on-1)", isNew: true },
+    ],
     plans: [
         {
             name: "Starter",
@@ -221,11 +268,14 @@ export const pricing = {
             price: 490,
             priceLabel: "490",
             limit: "1,000 ข้อความ/เดือน",
-            features: [
-                "ตอบอัตโนมัติ 24/7 พร้อม Dashboard",
-                "ฟีเจอร์ Auto Handover ส่งต่อแอดมิน",
-                "ทดลองใช้ฟรี 7 วันเต็ม",
-                "เหมาะสำหรับร้านที่เพิ่งเริ่มต้นใช้งาน",
+            targetDesc: "เหมาะสำหรับร้านที่เพิ่งเริ่มต้น",
+            includedFeatures: [
+                "ai_24_7",
+                "dashboard",
+                "handover",
+                "line_notify",
+                "trial",
+                "support_std",
             ],
             cta: { label: "เริ่มต้นใช้งาน", url: brand.lineAddFriendUrl },
             highlight: false,
@@ -236,12 +286,16 @@ export const pricing = {
             price: 790,
             priceLabel: "790",
             limit: "3,000 ข้อความ/เดือน",
+            targetDesc: "เหมาะสำหรับร้านยอดฮิต มีการยิงแอด",
             badge: "คุ้มที่สุด",
-            features: [
-                "ตอบอัตโนมัติ 24/7 พร้อม Dashboard",
-                "ฟีเจอร์ Auto Handover ส่งต่อแอดมิน",
-                "ทดลองใช้ฟรี 7 วันเต็ม",
-                "เหมาะสำหรับร้านยอดฮิต มีการยิงแอด",
+            includedFeatures: [
+                "ai_24_7",
+                "dashboard",
+                "handover",
+                "line_notify",
+                "trial",
+                "priority_support",
+                "usage_report",
             ],
             cta: { label: "ทดลองฟรี", url: brand.lineAddFriendUrl },
             highlight: true,
@@ -252,11 +306,17 @@ export const pricing = {
             price: 1490,
             priceLabel: "1490",
             limit: "10,000 ข้อความ/เดือน",
-            features: [
-                "ตอบอัตโนมัติ 24/7 พร้อม Dashboard",
-                "ฟีเจอร์ Auto Handover ส่งต่อแอดมิน",
-                "ทดลองใช้ฟรี 7 วันเต็ม",
-                "เหมาะสำหรับร้านใหญ่ ช่วงแคมเปญทะลัก",
+            targetDesc: "เหมาะสำหรับร้านใหญ่ ช่วงแคมเปญทะลัก",
+            includedFeatures: [
+                "ai_24_7",
+                "dashboard",
+                "handover",
+                "line_notify",
+                "trial",
+                "priority_support",
+                "usage_report",
+                "multi_admin",
+                "onboarding",
             ],
             cta: { label: "ติดต่อสอบถาม", url: brand.lineAddFriendUrl },
             highlight: false,
@@ -289,11 +349,12 @@ export const pricing = {
 // ─── Social Proof / Stats ──────────────────────────────────────────────────────
 
 export const stats = [
-    { value: "< 4วิ", label: "เวลาตอบกลับเฉลี่ย" },
-    { value: "24/7", label: "พร้อมให้บริการ" },
-    { value: "5+", label: "ร้านค้าที่ใช้งาน" },
-    { value: "100%", label: "Auto Handover เมื่อจำเป็น" },
+    { value: "4", suffix: " วิ", prefix: "< ", label: "เวลาตอบกลับเฉลี่ย" },
+    { value: "24/7", suffix: "", prefix: "", label: "พร้อมให้บริการ" },
+    { value: "5", suffix: "+", prefix: "", label: "ร้านค้าที่ใช้งาน" },
+    { value: "100", suffix: "%", prefix: "", label: "Auto Handover เมื่อจำเป็น" },
 ];
+
 
 // ─── Navigation ────────────────────────────────────────────────────────────────
 

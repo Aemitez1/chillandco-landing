@@ -1,18 +1,27 @@
 import { cn } from "@/lib/utils";
+import { LucideIcon } from "lucide-react";
+import * as LucideIcons from "lucide-react";
 
 interface FeatureCardProps {
-    emoji: string;
+    icon: string;
+    iconColor: string;
+    iconBg: string;
     title: string;
     desc: string;
     highlight?: boolean;
 }
 
 export default function FeatureCard({
-    emoji,
+    icon,
+    iconColor,
+    iconBg,
     title,
     desc,
     highlight = false,
 }: FeatureCardProps) {
+    // Dynamic Lucide icon lookup
+    const IconComponent = (LucideIcons as unknown as Record<string, LucideIcon>)[icon];
+
     return (
         <div
             className={cn(
@@ -24,11 +33,13 @@ export default function FeatureCard({
         >
             <div
                 className={cn(
-                    "w-12 h-12 flex items-center justify-center rounded-xl text-2xl mb-2 flex-shrink-0",
-                    highlight ? "bg-emerald-100/50" : "bg-zinc-50"
+                    "w-12 h-12 flex items-center justify-center rounded-xl flex-shrink-0",
+                    iconBg
                 )}
             >
-                {emoji}
+                {IconComponent ? (
+                    <IconComponent className={cn("w-6 h-6", iconColor)} />
+                ) : null}
             </div>
             <div>
                 <h3 className="text-lg font-bold text-zinc-900 mb-2 leading-tight">

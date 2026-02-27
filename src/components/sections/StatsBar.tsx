@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { stats } from "@/data/content";
-import AnimatedCounter from "@/components/ui/AnimatedCounter";
 
 export default function StatsBar() {
     const containerVariants = {
@@ -34,8 +33,15 @@ export default function StatsBar() {
                             variants={itemVariants}
                             className="flex flex-col items-center justify-center text-center px-4"
                         >
+                            {/* Render prefix + value + suffix as separate spans to avoid Thai combining-char bug */}
                             <span className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-emerald-400 mb-2">
-                                <AnimatedCounter value={stat.value} />
+                                {stat.prefix && (
+                                    <span className="mr-0.5">{stat.prefix}</span>
+                                )}
+                                <span>{stat.value}</span>
+                                {stat.suffix && (
+                                    <span>{stat.suffix}</span>
+                                )}
                             </span>
                             <span className="text-sm md:text-base text-zinc-400 font-medium">
                                 {stat.label}

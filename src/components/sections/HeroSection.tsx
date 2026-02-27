@@ -6,7 +6,7 @@ import GlowButton from "@/components/ui/GlowButton";
 
 export default function HeroSection() {
     return (
-        <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        <section className="relative pt-20 pb-16 md:pt-24 md:pb-20 overflow-hidden">
             {/* Background Decor */}
             <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-emerald-50/50 to-transparent -z-10" />
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-400/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 -z-10" />

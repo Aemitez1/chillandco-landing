@@ -8,6 +8,7 @@ const FeaturesSection = dynamic(() => import("@/components/sections/FeaturesSect
 const HowItWorksSection = dynamic(() => import("@/components/sections/HowItWorksSection"), { ssr: true });
 const DashboardSection = dynamic(() => import("@/components/sections/DashboardSection"), { ssr: true });
 const KnowledgeBaseSection = dynamic(() => import("@/components/sections/KnowledgeBaseSection"), { ssr: true });
+const AmbassadorSection = dynamic(() => import("@/components/sections/AmbassadorSection"), { ssr: true });
 const PricingSection = dynamic(() => import("@/components/sections/PricingSection"), { ssr: true });
 const FAQSection = dynamic(() => import("@/components/sections/FAQSection"), { ssr: true });
 const CTASection = dynamic(() => import("@/components/sections/CTASection"), { ssr: true });
@@ -24,6 +25,7 @@ export default function Home() {
                 <HowItWorksSection />
                 <DashboardSection />
                 <KnowledgeBaseSection />
+                <AmbassadorSection />
                 <PricingSection />
                 <FAQSection />
                 <CTASection />
