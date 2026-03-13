@@ -197,25 +197,25 @@ export const knowledgeBase = {
     sections: [
         {
             emoji: "🤖",
-            label: "PERSONA",
+            label: "AI IDENTITY",
             title: "บุคลิกและหมวดธุรกิจ",
             desc: "ชื่อร้าน ประเภทธุรกิจ สไตล์การตอบ — ทำให้ AI มีตัวตนที่ตรงกับแบรนด์ร้านคุณ",
         },
         {
             emoji: "📦",
-            label: "REPO",
+            label: "PRODUCTS",
             title: "ฐานข้อมูลสินค้า",
             desc: "รายการสินค้า ราคา สต็อก รายละเอียดที่ AI ใช้ตอบลูกค้าได้ทันที",
         },
         {
             emoji: "💳",
-            label: "PROTOCOL",
+            label: "ORDERS & PAYMENT",
             title: "ช่องทางชำระและขนส่ง",
             desc: "บัญชีธนาคาร พร้อมเพย์ ค่าส่ง ตัดรอบ — AI แจ้งลูกค้าได้ถูกต้องเสมอ",
         },
         {
             emoji: "❓",
-            label: "LOGIC",
+            label: "FAQ & RULES",
             title: "FAQ และกฎพิเศษ",
             desc: "คำถามที่พบบ่อย นโยบายคืนของ โปรโมชัน — ตอบได้แม้ตอนดึก",
         },

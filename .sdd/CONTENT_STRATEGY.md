@@ -42,7 +42,7 @@ Primary CTA: **กดปุ่ม Add Friend LINE OA**
 
 ### 7. Knowledge Base Section
 - **Goal:** อธิบายว่า "ใส่ข้อมูลอะไรให้ AI?"
-- **Format:** 4 card tabs (PERSONA / REPO / PROTOCOL / LOGIC)
+- **Format:** 4 card tabs (AI IDENTITY / PRODUCTS / ORDERS & PAYMENT / FAQ & RULES)
 - **Tone:** "ง่ายแค่กรอกข้อมูล AI ทำส่วนที่เหลือเอง"
 
 ### 8. Pricing Section
