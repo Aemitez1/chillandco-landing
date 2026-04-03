@@ -227,7 +227,7 @@ export const knowledgeBase = {
 
 export const ambassador = {
     badge: "Brand Ambassador",
-    name: "รีโน่",
+    name: "ลีโน่",
     nameEn: "Reno",
     title: "Content Creator & อินฟลูเอนเซอร์",
     imagePath: "/images/brand-ambassador.png",
@@ -360,11 +360,12 @@ export const stats = [
 
 export const nav = {
     links: [
-        { label: "ฟีเจอร์", href: "#features" },
-        { label: "Dashboard", href: "#dashboard" },
-        { label: "ราคา", href: "#pricing" },
-        { label: "คู่มือ", href: "#how-it-works" },
-        { label: "FAQ", href: "#faq" },
+        { label: "ฟีเจอร์", href: "/#features" },
+        { label: "Dashboard", href: "/#dashboard" },
+        { label: "ราคา", href: "/#pricing" },
+        { label: "คู่มือ", href: "/#how-it-works" },
+        { label: "FAQ", href: "/#faq" },
+        { label: "บทความ", href: "/blog" },
     ],
     cta: { label: "เพิ่มเพื่อน LINE", href: brand.lineAddFriendUrl },
 };
