@@ -16,7 +16,7 @@
 - [x] **1.1 Repository Init**
     - [x] `npx create-next-app@latest chillandco-landing --typescript --tailwind --app`
     - [x] สร้าง `.sdd/` folder และ copy SDD files
-    - [x] สร้าง `src/data/content.ts` (copy จาก `landing-content.ts`)
+    - [x] สร้าง `src/data/content.ts`
     - [x] Copy `logo.jpg` จาก `go-line-ai-bot/frontend/public/`
     - [x] Copy dashboard screenshots จาก `go-line-ai-bot/frontend/screenshots/`
 
@@ -89,6 +89,11 @@
 - [x] **3.4 Final CTA Section**
     - [x] `CTASection.tsx` — Full-width CTA block
     - [x] เชื่อม LINE Add Friend URL
+
+- [x] **3.5 Web Design Services Section (Add-on)**
+    - [x] `WebDesignSection.tsx` — บริการรับทำเว็บไซต์
+    - [x] 4 รูปแบบ: Landing Page, E-Commerce, Corporate, Portfolio
+    - [x] วางติดกับ Pricing Section เพื่อทำ Cross-selling
 
 ---
 

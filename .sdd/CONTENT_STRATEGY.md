@@ -51,12 +51,18 @@ Primary CTA: **กดปุ่ม Add Friend LINE OA**
 - **Strategy:** Highlight Growth (แนะนำ badge "คุ้มที่สุด")
 - **FAQ:** Accordion 5 ข้อ ตอบ objections หลัก
 
-### 9. CTA Section (Final)
+### 9. Web Design & Build Section (Add-on Services)
+- **Goal:** Cross-sell บริการรับทำเว็บไซต์ต่อเนื่องจากลูกค้าที่อาจจะยังไม่มีเว็บ
+- **Layout:** 4 cards grid (Landing Page, E-Commerce, Corporate, Portfolio)
+- **Strategy:** วางต่อจาก Pricing เพื่อไม่ให้กวน Product หลัก (AI Chatbot) แต่ยังให้เห็นได้ชัดเจน
+- **Tone:** "ดีไซน์สวย โหลดเร็ว รองรับทุก device — พร้อมเชื่อมต่อ AI Chatbot ได้ทันที"
+
+### 10. CTA Section (Final)
 - **Goal:** Last chance to convert visitor ที่ scroll มาถึงท้ายสุด
 - **Message:** "พร้อมให้ AI ทำงานแทนคุณแล้วหรือยัง?"
 - **CTA:** ปุ่ม Add Friend ใหญ่ที่สุดในหน้า
 
-### 10. Footer
+### 11. Footer
 - **Content:** Copyright, email support, LINE link
 - **Minimal:** ไม่ต้องมีลิงก์เยอะ
 

@@ -356,6 +356,94 @@ export const pricing = {
     ],
 };
 
+// ─── Web Design & Build Services ──────────────────────────────────────────────
+
+export const webDesign = {
+    badge: "🌐 บริการเสริม",
+    title: "รับออกแบบ & สร้างเว็บไซต์",
+    subtitle: "ดีไซน์สวย โหลดเร็ว รองรับทุก device — พร้อมเชื่อมต่อ AI Chatbot ได้ทันที",
+    note: "ราคาเริ่มต้น · ยังไม่รวม VAT 7% · ติดต่อสอบถามรายละเอียดเพิ่มเติมได้เลย",
+    cta: { label: "สอบถามราคา & รายละเอียด", url: brand.lineAddFriendUrl },
+    plans: [
+        {
+            emoji: "📄",
+            name: "Landing Page",
+            nameEn: "Landing Page",
+            desc: "หน้าเดียว ปิดการขายได้เต็มที่ เหมาะสำหรับยิงแอด สินค้าหรือโปรโมชัน",
+            price: "2,900",
+            priceUnit: "บาท / โปรเจกต์",
+            highlight: false,
+            badge: null,
+            features: [
+                "ออกแบบ Custom ตามแบรนด์",
+                "Responsive ทุก device",
+                "Framer Motion Animation",
+                "SEO Optimized",
+                "ส่งมอบใน 7 วัน",
+                "แก้ไข 2 รอบ",
+            ],
+            color: "violet",
+        },
+        {
+            emoji: "🛍️",
+            name: "E-Commerce",
+            nameEn: "E-Commerce",
+            desc: "ร้านค้าออนไลน์ครบวงจร สั่งซื้อ ชำระเงิน จัดการสต็อก บน Next.js",
+            price: "14,900",
+            priceUnit: "บาท / โปรเจกต์",
+            highlight: true,
+            badge: "ยอดนิยม",
+            features: [
+                "ระบบตะกร้า + ชำระเงิน",
+                "จัดการสินค้า + สต็อก",
+                "PromptPay / Credit Card",
+                "Admin Dashboard",
+                "เชื่อมต่อ LINE OA AI ได้",
+                "แก้ไข 3 รอบ",
+            ],
+            color: "emerald",
+        },
+        {
+            emoji: "🏢",
+            name: "Corporate",
+            nameEn: "Corporate Site",
+            desc: "เว็บบริษัท พอร์ตโฟลิโอองค์กร สร้างความน่าเชื่อถือ ดึงดูดลูกค้า B2B",
+            price: "11,900",
+            priceUnit: "บาท / โปรเจกต์",
+            highlight: false,
+            badge: null,
+            features: [
+                "หลายหน้า (About, Services, Contact)",
+                "Contact Form + Google Maps",
+                "Blog / News Section",
+                "SEO + Sitemap พร้อมใช้",
+                "รองรับ Multi-language",
+                "แก้ไข 3 รอบ",
+            ],
+            color: "blue",
+        },
+        {
+            emoji: "🎨",
+            name: "Portfolio",
+            nameEn: "Portfolio",
+            desc: "แสดงผลงาน สร้าง Personal Brand ให้โดดเด่น เหมาะ Freelancer & Creative",
+            price: "5,900",
+            priceUnit: "บาท / โปรเจกต์",
+            highlight: false,
+            badge: null,
+            features: [
+                "Gallery + Project Showcase",
+                "About Me + Skills Section",
+                "Dark / Light Mode",
+                "Smooth Animation",
+                "ส่งมอบใน 5 วัน",
+                "แก้ไข 2 รอบ",
+            ],
+            color: "pink",
+        },
+    ],
+};
+
 // ─── Social Proof / Stats ──────────────────────────────────────────────────────
 
 export const stats = [
@@ -373,6 +461,7 @@ export const nav = {
         { label: "ฟีเจอร์", href: "/#features" },
         { label: "Dashboard", href: "/#dashboard" },
         { label: "ราคา", href: "/#pricing" },
+        { label: "เว็บไซต์", href: "/#web-design" },
         { label: "คู่มือ", href: "/#how-it-works" },
         { label: "FAQ", href: "/#faq" },
         { label: "บทความ", href: "/blog" },

@@ -10,6 +10,7 @@ const DashboardSection = dynamic(() => import("@/components/sections/DashboardSe
 const KnowledgeBaseSection = dynamic(() => import("@/components/sections/KnowledgeBaseSection"), { ssr: true });
 const AmbassadorSection = dynamic(() => import("@/components/sections/AmbassadorSection"), { ssr: true });
 const PricingSection = dynamic(() => import("@/components/sections/PricingSection"), { ssr: true });
+const WebDesignSection = dynamic(() => import("@/components/sections/WebDesignSection"), { ssr: true });
 const FAQSection = dynamic(() => import("@/components/sections/FAQSection"), { ssr: true });
 const CTASection = dynamic(() => import("@/components/sections/CTASection"), { ssr: true });
 
@@ -27,6 +28,7 @@ export default function Home() {
                 <KnowledgeBaseSection />
                 <AmbassadorSection />
                 <PricingSection />
+                <WebDesignSection />
                 <FAQSection />
                 <CTASection />
             </main>
