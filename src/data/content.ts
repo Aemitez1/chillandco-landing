@@ -219,6 +219,12 @@ export const knowledgeBase = {
             title: "FAQ และกฎพิเศษ",
             desc: "คำถามที่พบบ่อย นโยบายคืนของ โปรโมชัน — ตอบได้แม้ตอนดึก",
         },
+        {
+            emoji: "🖼️",
+            label: "photo",
+            title: "รูปภาพสินค้า",
+            desc: "รูปภาพสินค้าที่ AI ใช้ตอบลูกค้าได้ทันที",
+        },
     ],
     limit: "5,000 ตัวอักษรต่อหมวด",
 };
@@ -251,6 +257,7 @@ export const pricing = {
     // Feature registry — isNew = [NEW] feature (เพิ่มเพื่อสร้าง differentiation)
     allFeatures: [
         { key: "ai_24_7", label: "ตอบอัตโนมัติ 24/7", isNew: false },
+        { key: "ai_photo", label: "ส่งรูปภาพ", isNew: true },
         { key: "dashboard", label: "Dashboard จัดการลูกค้า", isNew: false },
         { key: "handover", label: "Auto Handover ส่งต่อแอดมิน", isNew: false },
         { key: "line_notify", label: "แจ้งเตือนกลุ่ม LINE Admin", isNew: false },
@@ -271,6 +278,7 @@ export const pricing = {
             targetDesc: "เหมาะสำหรับร้านที่เพิ่งเริ่มต้น",
             includedFeatures: [
                 "ai_24_7",
+                "ai_photo",
                 "dashboard",
                 "handover",
                 "line_notify",
@@ -290,6 +298,7 @@ export const pricing = {
             badge: "คุ้มที่สุด",
             includedFeatures: [
                 "ai_24_7",
+                "ai_photo",
                 "dashboard",
                 "handover",
                 "line_notify",
@@ -309,6 +318,7 @@ export const pricing = {
             targetDesc: "เหมาะสำหรับร้านใหญ่ ช่วงแคมเปญทะลัก",
             includedFeatures: [
                 "ai_24_7",
+                "ai_photo",
                 "dashboard",
                 "handover",
                 "line_notify",
