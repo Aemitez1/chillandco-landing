@@ -105,6 +105,7 @@ export const features: FeaturesContent = {
             iconBg: "bg-violet-50",
             title: "Premium Control Dashboard",
             desc: "A web interface for store owners to view statistics, manage AI data, and monitor chats in real-time.",
+            highlight: true,
         },
         {
             icon: "Zap",
@@ -127,6 +128,7 @@ export const features: FeaturesContent = {
             iconBg: "bg-teal-50",
             title: "Multi-language Support",
             desc: "Automatically detects customer language, can respond naturally in both Thai and English.",
+            highlight: true,
         },
         {
             icon: "MessageCircle",
