@@ -43,7 +43,7 @@ export default function FeaturesSection({ features }: { features: FeaturesConten
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 w-full"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 w-full max-w-6xl mx-auto"
                 >
                     {features.items.map((item, idx) => (
                         <motion.li
