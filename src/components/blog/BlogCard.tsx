@@ -5,9 +5,10 @@ import { Tag, Calendar, ArrowRight } from "lucide-react";
 
 interface BlogCardProps {
     post: PostMeta;
+    readMoreString: string;
 }
 
-export default function BlogCard({ post }: BlogCardProps) {
+export default function BlogCard({ post, readMoreString }: BlogCardProps) {
     return (
         <Link
             href={`/blog/${post.slug}`}
@@ -61,7 +62,7 @@ export default function BlogCard({ post }: BlogCardProps) {
                         {formatDate(post.date)}
                     </span>
                     <span className="inline-flex items-center gap-1 text-xs font-medium text-emerald-600 group-hover:gap-2 transition-all">
-                        อ่านต่อ
+                        {readMoreString}
                         <ArrowRight className="w-3 h-3" />
                     </span>
                 </div>

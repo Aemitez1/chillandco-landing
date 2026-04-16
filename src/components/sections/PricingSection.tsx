@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { pricing } from "@/data/content";
+import { PricingContent } from "@/data/content.types";
 import SectionHeader from "@/components/ui/SectionHeader";
 import PricingCard from "@/components/ui/PricingCard";
 
-export default function PricingSection() {
+// @ts-ignore ignore the unused brand prop for layout consistency
+export default function PricingSection({ pricing, brand }: { pricing: PricingContent, brand?: any }) {
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -66,6 +67,7 @@ export default function PricingSection() {
                                 badge={plan.badge}
                                 currency={pricing.currency}
                                 billingNote={pricing.billingNote}
+                                cardConfigs={pricing.card}
                             />
                         </motion.div>
                     ))}

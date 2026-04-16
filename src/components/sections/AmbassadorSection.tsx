@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ambassador } from "@/data/content";
+import { AmbassadorContent } from "@/data/content.types";
 import GlowButton from "@/components/ui/GlowButton";
 import { TrendingUp, Clock, MessageCircle, Quote, Star } from "lucide-react";
 
@@ -12,7 +12,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
     MessageCircle,
 };
 
-export default function AmbassadorSection() {
+export default function AmbassadorSection({ ambassador }: { ambassador: AmbassadorContent }) {
     return (
         <section id="ambassador" className="bg-gradient-to-b from-white via-pink-50/30 to-white section-pad scroll-mt-16 overflow-hidden">
             <div className="container-narrow">
@@ -127,7 +127,7 @@ export default function AmbassadorSection() {
                             className="w-full"
                         />
                         <p className="text-xs text-zinc-400 text-center">
-                            เหมือนอย่างที่ {ambassador.name} ใช้ — ไม่ต้องผูกมัด ยกเลิกได้ทุกเมื่อ
+                            {ambassador.cancelNote.replace('{name}', ambassador.name)}
                         </p>
                     </motion.div>
                 </div>
@@ -223,7 +223,7 @@ export default function AmbassadorSection() {
                                 external
                             />
                             <p className="text-xs text-zinc-400 mt-3">
-                                เหมือนอย่างที่ {ambassador.name} ใช้ — ไม่ต้องผูกมัด ยกเลิกได้ทุกเมื่อ
+                                {ambassador.cancelNote.replace('{name}', ambassador.name)}
                             </p>
                         </div>
                     </motion.div>

@@ -11,7 +11,7 @@ interface FeatureItem {
 interface PricingCardProps {
     name: string;
     emoji: string;
-    price: number | null;
+    price: number | string | null;
     priceLabel: string;
     limit: string;
     targetDesc: string;
@@ -22,6 +22,7 @@ interface PricingCardProps {
     badge?: string;
     currency: string;
     billingNote: string;
+    cardConfigs: { month: string; included: string; isNew: string };
 }
 
 export default function PricingCard({
@@ -38,6 +39,7 @@ export default function PricingCard({
     badge,
     currency,
     billingNote,
+    cardConfigs,
 }: PricingCardProps) {
     const includedSet = new Set(includedFeatures);
 
@@ -75,7 +77,7 @@ export default function PricingCard({
                         <>
                             <span className="text-4xl md:text-5xl font-extrabold">{price}</span>
                             <span className="text-zinc-500 font-medium mb-1">
-                                {currency} / เดือน
+                                {currency} / {cardConfigs.month}
                             </span>
                         </>
                     ) : (
@@ -102,7 +104,7 @@ export default function PricingCard({
             {/* Feature Comparison List */}
             <div className="mt-auto">
                 <p className="text-xs font-bold text-zinc-400 mb-4 uppercase tracking-wider">
-                    ฟีเจอร์ที่ได้รับ
+                    {cardConfigs.included}
                 </p>
                 <ul className="flex flex-col gap-3">
                     {allFeatures.map((feature) => {
@@ -134,12 +136,12 @@ export default function PricingCard({
                                     {feature.label}
                                     {feature.isNew && included && (
                                         <span className="inline-flex items-center px-1.5 py-0.5 text-[10px] font-bold bg-amber-100 text-amber-700 rounded-full leading-none uppercase tracking-wide">
-                                            ใหม่
+                                            {cardConfigs.isNew}
                                         </span>
                                     )}
                                     {feature.isNew && !included && (
                                         <span className="inline-flex items-center px-1.5 py-0.5 text-[10px] font-bold bg-zinc-100 text-zinc-400 rounded-full leading-none uppercase tracking-wide">
-                                            ใหม่
+                                            {cardConfigs.isNew}
                                         </span>
                                     )}
                                 </span>

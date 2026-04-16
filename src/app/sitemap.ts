@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { brand } from "@/data/content";
+import { brand } from "@/data/content-th";
 import { getAllPosts } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {

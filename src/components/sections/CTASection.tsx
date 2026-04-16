@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { brand } from "@/data/content";
+import { BrandContent, CTAContent } from "@/data/content.types";
 import GlowButton from "@/components/ui/GlowButton";
 
-export default function CTASection() {
+export default function CTASection({ brand, cta }: { brand: BrandContent; cta: CTAContent }) {
     return (
         <section className="bg-zinc-900 text-white py-24 px-4 md:px-8 relative overflow-hidden">
             {/* Background Ornaments */}
@@ -24,20 +24,21 @@ export default function CTASection() {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                         </span>
-                        ระบบพร้อมใช้งานแล้ววันนี้
+                        {cta.badge}
                     </span>
 
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-[1.1]">
-                        พร้อมให้ AI ทำงาน<span className="text-gradient">แทนคุณ</span><br className="hidden md:block" />แล้วหรือยัง?
-                    </h2>
+                    <h2 
+                        className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-[1.1]"
+                        dangerouslySetInnerHTML={{ __html: cta.titleHtml }}
+                    />
 
                     <p className="text-lg md:text-xl text-zinc-400 max-w-2xl mb-10 leading-relaxed">
-                        สัมผัสประสบการณ์ให้ AI ปิดการขายให้คุณตลอด 24 ชั่วโมง โดยไม่ต้องเหนื่อยตอบแชทเองอีกต่อไป
+                        {cta.desc}
                     </p>
 
                     <GlowButton
                         href={brand.lineAddFriendUrl}
-                        label="เพิ่มเพื่อนเพื่อเริ่มต้นใช้งาน"
+                        label={cta.button}
                         variant="primary"
                         size="lg"
                         emoji="🚀"

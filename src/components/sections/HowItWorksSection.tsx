@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { howItWorks } from "@/data/content";
+import { HowItWorksContent } from "@/data/content.types";
 import SectionHeader from "@/components/ui/SectionHeader";
 import StepCard from "@/components/ui/StepCard";
 
-export default function HowItWorksSection() {
+export default function HowItWorksSection({ howItWorks }: { howItWorks: HowItWorksContent }) {
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {

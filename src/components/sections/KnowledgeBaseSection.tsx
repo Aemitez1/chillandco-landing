@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { knowledgeBase } from "@/data/content";
+import { KnowledgeBaseContent } from "@/data/content.types";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { cn } from "@/lib/utils";
 
-export default function KnowledgeBaseSection() {
+export default function KnowledgeBaseSection({ knowledgeBase }: { knowledgeBase: KnowledgeBaseContent }) {
     const [activeTab, setActiveTab] = useState(0);
 
     return (

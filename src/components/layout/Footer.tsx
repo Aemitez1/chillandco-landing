@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { footer, nav, brand } from "@/data/content";
+import { FooterContent, NavContent, BrandContent } from "@/data/content.types";
 
-export default function Footer() {
+export default function Footer({ footer, nav, brand }: { footer: FooterContent; nav: NavContent; brand: BrandContent }) {
     return (
         <footer className="bg-zinc-900 text-zinc-400 pt-12 pb-8 px-4 md:px-8">
             <div className="max-w-6xl mx-auto">
@@ -20,7 +20,7 @@ export default function Footer() {
                     {/* Nav Links */}
                     <div className="flex flex-col sm:flex-row gap-8">
                         <div className="flex flex-col gap-3">
-                            <p className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-1">เมนู</p>
+                            <p className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-1">{footer.menuTitle}</p>
                             {nav.links.map((link) => (
                                 <Link
                                     key={link.href}
@@ -33,7 +33,7 @@ export default function Footer() {
                         </div>
 
                         <div className="flex flex-col gap-3">
-                            <p className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-1">ติดต่อ</p>
+                            <p className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-1">{footer.contactTitle}</p>
                             {footer.links.map((link) => (
                                 <Link
                                     key={link.href}

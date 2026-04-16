@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { pricing } from "@/data/content";
+import { PricingContent } from "@/data/content.types";
 import SectionHeader from "@/components/ui/SectionHeader";
 import FAQItem from "@/components/ui/FAQItem";
 
-export default function FAQSection() {
+export default function FAQSection({ pricing }: { pricing: PricingContent }) {
     const [openIndex, setOpenIndex] = useState<number | null>(0); // First item open by default
 
     const toggleItem = (idx: number) => {
@@ -45,8 +45,8 @@ export default function FAQSection() {
                     className="mb-12"
                 >
                     <SectionHeader
-                        title="คำถามที่พบบ่อย (FAQ)"
-                        subtitle="ข้อสงสัยเกี่ยวกับการใช้งานระบบ AI ตอบแชท"
+                        title={pricing.faqTitle}
+                        subtitle={pricing.faqSubtitle}
                         align="center"
                     />
                 </motion.div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { webDesign } from "@/data/content";
+import { WebDesignContent } from "@/data/content.types";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 
 // Color map for accent colors per plan
@@ -70,7 +70,7 @@ const itemVariants = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.55 } },
 };
 
-export default function WebDesignSection() {
+export default function WebDesignSection({ webDesign }: { webDesign: WebDesignContent }) {
     return (
         <section id="web-design" className="relative bg-gradient-to-b from-zinc-900 via-zinc-800 to-zinc-900 text-white section-pad scroll-mt-16 overflow-hidden">
 
@@ -163,7 +163,7 @@ export default function WebDesignSection() {
                                     {/* Price */}
                                     <div className={`rounded-xl px-4 py-3 ${c.priceBg}/10 border border-white/10`}>
                                         <div className="flex items-baseline gap-1.5">
-                                            <span className="text-xs text-zinc-400 font-medium">เริ่มต้นที่</span>
+                                            <span className="text-xs text-zinc-400 font-medium">{webDesign.startingAt}</span>
                                         </div>
                                         <div className="flex items-baseline gap-2 mt-0.5">
                                             <span className={`text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r ${c.accent}`}>

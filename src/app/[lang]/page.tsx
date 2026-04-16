@@ -14,26 +14,30 @@ const WebDesignSection = dynamic(() => import("@/components/sections/WebDesignSe
 const FAQSection = dynamic(() => import("@/components/sections/FAQSection"), { ssr: true });
 const CTASection = dynamic(() => import("@/components/sections/CTASection"), { ssr: true });
 
-export default function Home() {
+import { getDictionary } from "@/data/dictionaries";
+import { Locale } from "@/i18n-config";
+
+export default async function Home({ params }: { params: { lang: Locale } }) {
+    const dict = await getDictionary(params.lang);
     return (
         <div className="flex flex-col min-h-screen">
-            <Navbar />
+            <Navbar nav={dict.nav} lang={params.lang} brand={dict.brand} />
 
             <main className="flex-1">
-                <HeroSection />
-                <StatsBar />
-                <FeaturesSection />
-                <HowItWorksSection />
-                <DashboardSection />
-                <KnowledgeBaseSection />
-                <AmbassadorSection />
-                <PricingSection />
-                <WebDesignSection />
-                <FAQSection />
-                <CTASection />
+                <HeroSection hero={dict.hero} />
+                <StatsBar stats={dict.stats} />
+                <FeaturesSection features={dict.features} />
+                <HowItWorksSection howItWorks={dict.howItWorks} />
+                <DashboardSection dashboard={dict.dashboard} />
+                <KnowledgeBaseSection knowledgeBase={dict.knowledgeBase} />
+                <AmbassadorSection ambassador={dict.ambassador} />
+                <PricingSection pricing={dict.pricing} brand={dict.brand} />
+                <WebDesignSection webDesign={dict.webDesign} />
+                <FAQSection pricing={dict.pricing} />
+                <CTASection brand={dict.brand} cta={dict.cta} />
             </main>
 
-            <Footer />
+            <Footer footer={dict.footer} nav={dict.nav} brand={dict.brand} />
         </div>
     );
 }

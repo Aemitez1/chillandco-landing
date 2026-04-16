@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { dashboard } from "@/data/content";
+import { DashboardContent } from "@/data/content.types";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { LayoutDashboard, Users, RefreshCcw, Bot, Settings, MessageSquare, FileText, Headphones, LucideIcon, CheckCircle2 } from "lucide-react";
 
@@ -19,7 +19,7 @@ const iconMap: Record<string, LucideIcon> = {
     Headphones,
 };
 
-export default function DashboardSection() {
+export default function DashboardSection({ dashboard }: { dashboard: DashboardContent }) {
     const [activeDevice, setActiveDevice] = useState(0);
 
     return (
@@ -101,7 +101,7 @@ export default function DashboardSection() {
                         className="w-full lg:w-1/3 flex flex-col gap-6"
                     >
                         <h3 className="text-xl font-bold text-zinc-900">
-                            ควบคุมทุกอย่างได้เอง
+                            {dashboard.featureListTitle}
                         </h3>
                         <ul className="flex flex-col gap-4">
                             {dashboard.features.map((feature, idx) => {

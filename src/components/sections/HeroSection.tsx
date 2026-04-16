@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { hero, brand } from "@/data/content";
+import { HeroContent } from "@/data/content.types";
 import GlowButton from "@/components/ui/GlowButton";
 
-export default function HeroSection() {
+export default function HeroSection({ hero }: { hero: HeroContent }) {
     return (
         <section className="relative pt-20 pb-16 md:pt-24 md:pb-20 overflow-hidden">
             {/* Background Decor */}
@@ -25,10 +25,10 @@ export default function HeroSection() {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-zinc-900 leading-[1.1]">
-                        ให้ AI ตอบลูกค้า LINE <br className="hidden md:block" />
-                        <span className="text-gradient">แทนคุณ 24 ชั่วโมง</span>
-                    </h1>
+                    <h1 
+                        className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-zinc-900 leading-[1.1]"
+                        dangerouslySetInnerHTML={{ __html: hero.headlineHtml }}
+                    />
 
                     {/* Description */}
                     <p className="text-lg md:text-xl text-zinc-600 max-w-2xl leading-relaxed mt-2">

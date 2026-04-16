@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { stats } from "@/data/content";
+import { StatsContent } from "@/data/content.types";
 
-export default function StatsBar() {
+export default function StatsBar({ stats }: { stats: StatsContent[] }) {
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {

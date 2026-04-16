@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { brand } from '@/data/content';
+import { brand } from '@/data/content-th';
 
 export default function robots(): MetadataRoute.Robots {
     return {

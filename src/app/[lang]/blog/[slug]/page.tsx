@@ -5,10 +5,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronLeft, Tag, Calendar } from "lucide-react";
-import { brand } from "@/data/content";
+
+import { getDictionary } from "@/data/dictionaries";
+import { Locale } from "@/i18n-config";
 
 interface Props {
-    params: Promise<{ slug: string }>;
+    params: Promise<{ slug: string; lang: Locale }>;
 }
 
 export async function generateStaticParams() {
@@ -17,33 +19,35 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const { slug } = await params;
+    const { slug, lang } = await params;
     const post = await getPostBySlug(slug);
+    const dict = await getDictionary(lang);
     if (!post) return {};
 
     return {
-        title: `${post.title} | Chill&Co Works`,
+        title: `${post.title} | ${dict.brand.name}`,
         description: post.description,
         openGraph: {
             title: post.title,
             description: post.description,
             type: "article",
             publishedTime: post.date,
-            url: `${brand.url}/blog/${slug}`,
+            url: `${dict.brand.url}/blog/${slug}`,
             images: post.coverImage ? [post.coverImage] : ["/og-image.jpg"],
         },
     };
 }
 
 export default async function BlogPostPage({ params }: Props) {
-    const { slug } = await params;
+    const { slug, lang } = await params;
     const post = await getPostBySlug(slug);
+    const dict = await getDictionary(lang);
 
     if (!post) notFound();
 
     return (
         <div className="flex flex-col min-h-screen">
-            <Navbar />
+            <Navbar nav={dict.nav} lang={lang} brand={dict.brand} />
 
             <main className="flex-1 pt-24 pb-20">
                 <div className="max-w-3xl mx-auto px-4 md:px-8">
@@ -53,7 +57,7 @@ export default async function BlogPostPage({ params }: Props) {
                         className="inline-flex items-center gap-1 text-sm text-zinc-400 hover:text-zinc-700 transition-colors mb-8"
                     >
                         <ChevronLeft className="w-4 h-4" />
-                        ดูบทความทั้งหมด
+                        {dict.blog.backToAll}
                     </Link>
 
                     {/* Header */}
@@ -91,24 +95,24 @@ export default async function BlogPostPage({ params }: Props) {
                     {/* CTA Banner */}
                     <div className="mt-16 p-8 bg-gradient-to-br from-emerald-50 to-white rounded-2xl border border-emerald-100 text-center">
                         <p className="text-lg font-bold text-zinc-900 mb-2">
-                            พร้อมให้ AI ทำงานแทนคุณแล้วหรือยัง?
+                            {dict.blog.ctaTitle}
                         </p>
                         <p className="text-sm text-zinc-500 mb-5">
-                            ทดลองใช้ฟรี 7 วัน ไม่ต้องผูกมัด ยกเลิกได้ทุกเมื่อ
+                            {dict.blog.ctaDesc}
                         </p>
                         <a
-                            href={brand.lineAddFriendUrl}
+                            href={dict.brand.lineAddFriendUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-full transition-all duration-200 shadow-md shadow-emerald-200"
                         >
-                            <span>💚</span> เพิ่มเพื่อน LINE OA
+                            <span>💚</span> {dict.blog.ctaButton}
                         </a>
                     </div>
                 </div>
             </main>
 
-            <Footer />
+            <Footer footer={dict.footer} nav={dict.nav} brand={dict.brand} />
         </div>
     );
 }

@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { features } from "@/data/content";
+import { FeaturesContent } from "@/data/content.types";
 import SectionHeader from "@/components/ui/SectionHeader";
 import FeatureCard from "@/components/ui/FeatureCard";
 
-export default function FeaturesSection() {
+export default function FeaturesSection({ features }: { features: FeaturesContent }) {
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {

@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
-import { brand } from "@/data/content";
+import { BrandContent } from "@/data/content.types";
 
-export default function FloatingContactButton() {
+export default function FloatingContactButton({ brand, ariaLabel }: { brand: BrandContent; ariaLabel: string }) {
     return (
         <motion.a
             href={brand.lineAddFriendUrl}
@@ -16,7 +16,7 @@ export default function FloatingContactButton() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[100] flex items-center justify-center w-14 h-14 bg-[#00B900] text-white rounded-full shadow-[0_4px_14px_rgba(0,185,0,0.5)] hover:shadow-[0_6px_20px_rgba(0,185,0,0.6)] focus:outline-none focus:ring-4 focus:ring-[#00B900]/50 transition-shadow duration-300"
-            aria-label="ติดต่อเราผ่าน LINE"
+            aria-label={ariaLabel}
         >
             <MessageCircle className="w-7 h-7" />
 

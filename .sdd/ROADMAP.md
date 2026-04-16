@@ -132,9 +132,22 @@
 
 ---
 
+## 🟣 Phase 2: Growth & Ecosystem (Progress: 100%)
+**Goal:** Expand SEO reach via Blog and support Internationalization (i18n)
+
+- [x] **2.1 Internationalization (i18n)**
+    - [x] Dynamic Routing `app/[lang]`
+    - [x] Middleware สำหรับ Language Detection & Redirect
+    - [x] Extract Hardcoded Text 100% ไปที่ `content-th.ts` และ `content-en.ts`
+    - [x] Language Switcher บน Navbar
+
+- [x] **2.2 Blog Section (SEO Content Marketing)**
+    - [x] อัปเดตโครงสร้าง Blog (`app/[lang]/blog`)
+    - [x] รองรับ Metadata แบบ Dynamic ตามภาษา
+    - [x] BlogCard component
+
 ## 🚀 Future Phases (Backlog)
 
-- [ ] **Phase 2:** Blog section (SEO content marketing)
-- [ ] **Phase 2:** Contact form (Formspree หรือ Resend)
+- [ ] **Phase 3:** Contact form (Formspree หรือ Resend)
 - [ ] **Phase 3:** Dashboard link generator ให้ลูกค้าใหม่ลงทะเบียน self-service
 - [ ] **Phase 3:** Analytics dashboard (Google Analytics / Vercel Analytics)
