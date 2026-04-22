@@ -8,6 +8,7 @@ import {
     AmbassadorContent,
     PricingContent,
     WebDesignContent,
+    PageAdminContent,
     StatsContent,
     NavContent,
     FooterContent,
@@ -440,6 +441,91 @@ export const webDesign: WebDesignContent = {
     ],
 };
 
+export const pageAdmin: PageAdminContent = {
+    badge: "👩‍💼 Add-on Service",
+    title: "Professional Page Admin & Chat Support",
+    subtitle: "We manage your customers across all platforms with a 7+ year experienced bilingual team — Thai & English",
+    experience: "7+ years of experience in service & hospitality",
+    services: [
+        {
+            emoji: "💬",
+            title: "Customer Chat Support",
+            desc: "Professional, polite, and clear communication in both Thai and English",
+        },
+        {
+            emoji: "🛒",
+            title: "Order Taking & Sales Closing",
+            desc: "Receive orders, close sales, and coordinate with related departments smoothly",
+        },
+        {
+            emoji: "🔗",
+            title: "Backend Coordination",
+            desc: "Coordinate between customers and your team to make everything move forward without friction",
+        },
+        {
+            emoji: "📊",
+            title: "Monthly Report",
+            desc: "Monthly performance summary report, so you can track results clearly",
+        },
+        {
+            emoji: "🌐",
+            title: "Multi-Platform",
+            desc: "Supports Facebook Page, Instagram, LINE OA and all online platforms",
+        },
+        {
+            emoji: "🇬🇧",
+            title: "Bilingual: Thai & English",
+            desc: "Communicate naturally with both Thai and international customers",
+        },
+    ],
+    workHoursLabel: "Working Hours",
+    workDays: "Monday–Saturday",
+    workHours: "09:00–18:00",
+    workFlexNote: "Flexible hours by arrangement",
+    reportNote: "Monthly summary report included",
+    platformsLabel: "Supported Platforms",
+    platforms: ["Facebook Page", "Instagram", "LINE OA", "Shopee", "Lazada"],
+    startingAt: "Starting at",
+    plans: [
+        {
+            name: "Basic",
+            emoji: "🌱",
+            price: "4,900",
+            priceUnit: "THB / Month",
+            highlight: false,
+            badge: null,
+            features: [
+                "Chat support (Mon–Sat 09:00–18:00)",
+                "Order taking & sales closing",
+                "Backend coordination",
+                "Monthly summary report",
+                "1–2 platforms supported",
+                "Thai language communication",
+            ],
+            color: "blue",
+        },
+        {
+            name: "Premium",
+            emoji: "🔥",
+            price: "12,900",
+            priceUnit: "THB / Month",
+            highlight: true,
+            badge: "Full Service",
+            features: [
+                "Full multi-platform chat support",
+                "Order taking & sales closing",
+                "Full backend coordination",
+                "Monthly summary report",
+                "All platforms supported",
+                "Bilingual: Thai & English",
+            ],
+            color: "amber",
+        },
+    ],
+    note: "Starting prices · VAT 7% not included · Contact us for more details",
+    cta: { label: "Inquire Details & Pricing", url: brand.lineAddFriendUrl },
+};
+
 export const stats: StatsContent[] = [
     { value: "4", suffix: " sec", prefix: "< ", label: "Avg. Reply Time" },
     { value: "24/7", suffix: "", prefix: "", label: "Availability" },
@@ -452,6 +538,7 @@ export const nav: NavContent = {
         { label: "Features", href: "/#features" },
         { label: "Dashboard", href: "/#dashboard" },
         { label: "Pricing", href: "/#pricing" },
+        { label: "Page Admin", href: "/#page-admin" },
         { label: "Website", href: "/#web-design" },
         { label: "Manual", href: "/#how-it-works" },
         { label: "FAQ", href: "/#faq" },

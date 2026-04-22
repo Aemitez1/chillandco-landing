@@ -129,6 +129,42 @@ export interface WebDesignContent {
     plans: WebDesignPlan[];
 }
 
+export interface PageAdminService {
+    emoji: string;
+    title: string;
+    desc: string;
+}
+
+export interface PageAdminPlan {
+    name: string;
+    emoji: string;
+    price: string;
+    priceUnit: string;
+    highlight: boolean;
+    badge: string | null;
+    features: string[];
+    color: string;
+}
+
+export interface PageAdminContent {
+    badge: string;
+    title: string;
+    subtitle: string;
+    experience: string;
+    services: PageAdminService[];
+    workHoursLabel: string;
+    workDays: string;
+    workHours: string;
+    workFlexNote: string;
+    reportNote: string;
+    startingAt: string;
+    plans: PageAdminPlan[];
+    note: string;
+    cta: { label: string; url: string };
+    platforms: string[];
+    platformsLabel: string;
+}
+
 export interface StatsContent {
     value: string;
     suffix: string;
@@ -188,6 +224,7 @@ export interface ContentDictionary {
     ambassador: AmbassadorContent;
     pricing: PricingContent;
     webDesign: WebDesignContent;
+    pageAdmin: PageAdminContent;
     stats: StatsContent[];
     nav: NavContent;
     footer: FooterContent;

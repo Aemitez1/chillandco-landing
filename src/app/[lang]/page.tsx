@@ -10,6 +10,7 @@ const DashboardSection = dynamic(() => import("@/components/sections/DashboardSe
 const KnowledgeBaseSection = dynamic(() => import("@/components/sections/KnowledgeBaseSection"), { ssr: true });
 const AmbassadorSection = dynamic(() => import("@/components/sections/AmbassadorSection"), { ssr: true });
 const PricingSection = dynamic(() => import("@/components/sections/PricingSection"), { ssr: true });
+const PageAdminSection = dynamic(() => import("@/components/sections/PageAdminSection"), { ssr: true });
 const WebDesignSection = dynamic(() => import("@/components/sections/WebDesignSection"), { ssr: true });
 const FAQSection = dynamic(() => import("@/components/sections/FAQSection"), { ssr: true });
 const CTASection = dynamic(() => import("@/components/sections/CTASection"), { ssr: true });
@@ -32,6 +33,7 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
                 <KnowledgeBaseSection knowledgeBase={dict.knowledgeBase} />
                 <AmbassadorSection ambassador={dict.ambassador} />
                 <PricingSection pricing={dict.pricing} brand={dict.brand} />
+                <PageAdminSection pageAdmin={dict.pageAdmin} />
                 <WebDesignSection webDesign={dict.webDesign} />
                 <FAQSection pricing={dict.pricing} />
                 <CTASection brand={dict.brand} cta={dict.cta} />

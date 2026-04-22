@@ -1,4 +1,4 @@
-import { BrandContent, HeroContent, HowItWorksContent, FeaturesContent, DashboardContent, KnowledgeBaseContent, AmbassadorContent, PricingContent, WebDesignContent, StatsContent, NavContent, FooterContent, CTAContent, BlogContent, SEOContent } from './content.types';
+import { BrandContent, HeroContent, HowItWorksContent, FeaturesContent, DashboardContent, KnowledgeBaseContent, AmbassadorContent, PricingContent, WebDesignContent, PageAdminContent, StatsContent, NavContent, FooterContent, CTAContent, BlogContent, SEOContent } from './content.types';
 /**
  * content.ts — Landing Page Content
  * Chill&Co Works: LINE OA AI Chatbot SaaS
@@ -364,6 +364,93 @@ export const pricing: PricingContent = {
     ],
 };
 
+// ─── Page Admin Service ────────────────────────────────────────────────────────
+
+export const pageAdmin: PageAdminContent = {
+    badge: "👩‍💼 บริการเสริม",
+    title: "Admin เพจ & ตอบแชท มืออาชีพ",
+    subtitle: "ดูแลลูกค้าแทนคุณ ครบทุกแพลตฟอร์ม ด้วยทีมแอดมินประสบการณ์กว่า 7 ปี สื่อสารได้ 2 ภาษา ไทย–อังกฤษ",
+    experience: "ประสบการณ์สายบริการและท่องเที่ยวกว่า 7 ปี",
+    services: [
+        {
+            emoji: "💬",
+            title: "ตอบแชทลูกค้า",
+            desc: "ตอบอย่างมืออาชีพ สุภาพ เข้าใจง่าย ใช้ภาษาไทยถูกต้องและอังกฤษได้ดี",
+        },
+        {
+            emoji: "🛒",
+            title: "รับออเดอร์ & ปิดการขาย",
+            desc: "รับออเดอร์ ปิดการขาย และประสานต่อยังแผนกที่เกี่ยวข้องอย่างราบรื่น",
+        },
+        {
+            emoji: "🔗",
+            title: "ประสานงานหลังบ้าน",
+            desc: "ประสานงานระหว่างลูกค้าและทีมของคุณ ให้ทุกอย่างเดินหน้าได้ไม่ติดขัด",
+        },
+        {
+            emoji: "📊",
+            title: "สรุปรายงานรายเดือน",
+            desc: "รายงานสรุปผลประจำเดือน ให้คุณติดตามยอดและสถานการณ์ได้ชัดเจน",
+        },
+        {
+            emoji: "🌐",
+            title: "ทุกแพลตฟอร์ม",
+            desc: "รองรับ Facebook Page, Instagram, LINE OA และแพลตฟอร์มออนไลน์ทุกชนิด",
+        },
+        {
+            emoji: "🇬🇧",
+            title: "2 ภาษา ไทย–อังกฤษ",
+            desc: "สื่อสารกับลูกค้าชาวไทยและต่างชาติได้อย่างเป็นธรรมชาติ",
+        },
+    ],
+    workHoursLabel: "เวลาทำงาน",
+    workDays: "จันทร์–เสาร์",
+    workHours: "09:00–18:00 น.",
+    workFlexNote: "เวลางานยืดหยุ่นได้ตามข้อตกลง",
+    reportNote: "มีรายงานสรุปประจำเดือน",
+    platformsLabel: "รองรับแพลตฟอร์ม",
+    platforms: ["Facebook Page", "Instagram", "LINE OA", "Shopee", "Lazada"],
+    startingAt: "เริ่มต้นที่",
+    plans: [
+        {
+            name: "Basic",
+            emoji: "🌱",
+            price: "4,900",
+            priceUnit: "บาท / เดือน",
+            highlight: false,
+            badge: null,
+            features: [
+                "ตอบแชทลูกค้า (จ.–ส. 09:00–18:00)",
+                "รับออเดอร์ & ปิดการขาย",
+                "ประสานงานหลังบ้าน",
+                "สรุปรายงานรายเดือน",
+                "รองรับ 1–2 แพลตฟอร์ม",
+                "สื่อสารภาษาไทย",
+            ],
+            color: "blue",
+        },
+        {
+            name: "Premium",
+            emoji: "🔥",
+            price: "12,900",
+            priceUnit: "บาท / เดือน",
+            highlight: true,
+            badge: "ครบครัน",
+            features: [
+                "ตอบแชทลูกค้าครบทุกแพลตฟอร์ม",
+                "รับออเดอร์ & ปิดการขาย",
+                "ประสานงานหลังบ้านเต็มรูปแบบ",
+                "สรุปรายงานรายเดือน",
+                "รองรับทุกแพลตฟอร์ม",
+                "สื่อสาร 2 ภาษา ไทย–อังกฤษ",
+            ],
+            color: "amber",
+        },
+    ],
+    note: "ราคาเริ่มต้น · ยังไม่รวม VAT 7% · ติดต่อสอบถามรายละเอียดเพิ่มเติมได้เลย",
+    cta: { label: "สอบถามรายละเอียด & ราคา", url: brand.lineAddFriendUrl },
+};
+
 // ─── Web Design & Build Services ──────────────────────────────────────────────
 
 export const webDesign: WebDesignContent = {
@@ -470,6 +557,7 @@ export const nav: NavContent = {
         { label: "ฟีเจอร์", href: "/#features" },
         { label: "Dashboard", href: "/#dashboard" },
         { label: "ราคา", href: "/#pricing" },
+        { label: "แอดมินเพจ", href: "/#page-admin" },
         { label: "เว็บไซต์", href: "/#web-design" },
         { label: "คู่มือ", href: "/#how-it-works" },
         { label: "FAQ", href: "/#faq" },
