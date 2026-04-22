@@ -463,11 +463,6 @@ export const pageAdmin: PageAdminContent = {
             desc: "Coordinate between customers and your team to make everything move forward without friction",
         },
         {
-            emoji: "📊",
-            title: "Monthly Report",
-            desc: "Monthly performance summary report, so you can track results clearly",
-        },
-        {
             emoji: "🌐",
             title: "Multi-Platform",
             desc: "Supports Facebook Page, Instagram, LINE OA and all online platforms",
