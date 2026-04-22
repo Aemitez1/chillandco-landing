@@ -417,8 +417,8 @@ export const pageAdmin: PageAdminContent = {
             emoji: "🌱",
             price: "4,900",
             priceUnit: "บาท / เดือน",
-            highlight: false,
-            badge: null,
+            highlight: true,
+            badge: "ยอดนิยม",
             features: [
                 "ตอบแชทลูกค้า (จ.–ส. 09:00–18:00)",
                 "รับออเดอร์ & ปิดการขาย",
@@ -434,7 +434,7 @@ export const pageAdmin: PageAdminContent = {
             emoji: "🔥",
             price: "12,900",
             priceUnit: "บาท / เดือน",
-            highlight: true,
+            highlight: false,
             badge: "ครบครัน",
             features: [
                 "ตอบแชทลูกค้าครบทุกแพลตฟอร์ม",
@@ -487,8 +487,8 @@ export const webDesign: WebDesignContent = {
             desc: "ร้านค้าออนไลน์ครบวงจร สั่งซื้อ ชำระเงิน จัดการสต็อก บน Next.js",
             price: "14,900",
             priceUnit: "บาท / โปรเจกต์",
-            highlight: true,
-            badge: "ยอดนิยม",
+            highlight: false,
+            badge: null,
             features: [
                 "ระบบตะกร้า + ชำระเงิน",
                 "จัดการสินค้า + สต็อก",
@@ -506,8 +506,8 @@ export const webDesign: WebDesignContent = {
             desc: "เว็บบริษัท พอร์ตโฟลิโอองค์กร สร้างความน่าเชื่อถือ ดึงดูดลูกค้า B2B",
             price: "11,900",
             priceUnit: "บาท / โปรเจกต์",
-            highlight: false,
-            badge: null,
+            highlight: true,
+            badge: "ยอดนิยม",
             features: [
                 "หลายหน้า (About, Services, Contact)",
                 "Contact Form + Google Maps",

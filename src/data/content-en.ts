@@ -388,8 +388,8 @@ export const webDesign: WebDesignContent = {
             desc: "Full online store with checkout, payment, and stock management on Next.js",
             price: "14,900",
             priceUnit: "THB / Project",
-            highlight: true,
-            badge: "Popular",
+            highlight: false,
+            badge: null,
             features: [
                 "Cart + Payment system",
                 "Product + Stock management",
@@ -407,8 +407,8 @@ export const webDesign: WebDesignContent = {
             desc: "Company website, corporate portfolio building trust and attracting B2B clients",
             price: "11,900",
             priceUnit: "THB / Project",
-            highlight: false,
-            badge: null,
+            highlight: true,
+            badge: "Popular",
             features: [
                 "Multi-page (About, Services, Contact)",
                 "Contact Form + Google Maps",
@@ -492,8 +492,8 @@ export const pageAdmin: PageAdminContent = {
             emoji: "🌱",
             price: "4,900",
             priceUnit: "THB / Month",
-            highlight: false,
-            badge: null,
+            highlight: true,
+            badge: "Most Popular",
             features: [
                 "Chat support (Mon–Sat 09:00–18:00)",
                 "Order taking & sales closing",
@@ -509,7 +509,7 @@ export const pageAdmin: PageAdminContent = {
             emoji: "🔥",
             price: "12,900",
             priceUnit: "THB / Month",
-            highlight: true,
+            highlight: false,
             badge: "Full Service",
             features: [
                 "Full multi-platform chat support",
