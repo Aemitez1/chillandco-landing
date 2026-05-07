@@ -214,6 +214,38 @@ export interface SEOContent {
     blogDesc: string;
 }
 
+export interface PortfolioProject {
+    id: string;
+    title: string;
+    category: string;
+    categoryColor: string;
+    desc: string;
+    image: string;
+    tags: string[];
+    type: string;
+}
+
+export interface PortfolioPageContent {
+    badge: string;
+    title: string;
+    titleHighlight: string;
+    subtitle: string;
+    backHome: string;
+    viewLabel: string;
+    ctaTitle: string;
+    ctaDesc: string;
+    ctaButton: string;
+    filterAll: string;
+    stats: {
+        projectsValue: string;
+        projectsLabel: string;
+        responsiveLabel: string;
+        deliveryValue: string;
+        deliveryLabel: string;
+    };
+    projects: PortfolioProject[];
+}
+
 export interface ContentDictionary {
     brand: BrandContent;
     hero: HeroContent;
@@ -225,6 +257,7 @@ export interface ContentDictionary {
     pricing: PricingContent;
     webDesign: WebDesignContent;
     pageAdmin: PageAdminContent;
+    portfolioPage: PortfolioPageContent;
     stats: StatsContent[];
     nav: NavContent;
     footer: FooterContent;
@@ -233,3 +266,4 @@ export interface ContentDictionary {
     seo: SEOContent;
     floatingContact: { ariaLabel: string };
 }
+

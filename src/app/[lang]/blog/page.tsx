@@ -5,6 +5,8 @@ import Footer from "@/components/layout/Footer";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
+import { Locale } from "@/i18n-config";
+import { getDictionary } from "@/data/dictionaries";
 
 export async function generateMetadata({ params }: { params: { lang: Locale } }): Promise<Metadata> {
     const dict = await getDictionary(params.lang);
@@ -18,9 +20,6 @@ export async function generateMetadata({ params }: { params: { lang: Locale } })
         },
     };
 }
-
-import { Locale } from "@/i18n-config";
-import { getDictionary } from "@/data/dictionaries";
 
 export default async function BlogPage({ params }: { params: { lang: Locale } }) {
     const dict = await getDictionary(params.lang);

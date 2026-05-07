@@ -1,4 +1,4 @@
-import { BrandContent, HeroContent, HowItWorksContent, FeaturesContent, DashboardContent, KnowledgeBaseContent, AmbassadorContent, PricingContent, WebDesignContent, PageAdminContent, StatsContent, NavContent, FooterContent, CTAContent, BlogContent, SEOContent } from './content.types';
+import { BrandContent, HeroContent, HowItWorksContent, FeaturesContent, DashboardContent, KnowledgeBaseContent, AmbassadorContent, PricingContent, WebDesignContent, PageAdminContent, StatsContent, NavContent, FooterContent, CTAContent, BlogContent, SEOContent, PortfolioPageContent } from './content.types';
 /**
  * content.ts — Landing Page Content
  * Chill&Co Works: LINE OA AI Chatbot SaaS
@@ -554,11 +554,85 @@ export const nav: NavContent = {
         { label: "ราคา", href: "/#pricing" },
         { label: "แอดมินเพจ", href: "/#page-admin" },
         { label: "เว็บไซต์", href: "/#web-design" },
-        { label: "คู่มือ", href: "/#how-it-works" },
+        { label: "ผลงาน", href: "/portfolio" },
         { label: "FAQ", href: "/#faq" },
         { label: "บทความ", href: "/blog" },
     ],
     cta: { label: "เพิ่มเพื่อน LINE", href: brand.lineAddFriendUrl },
+};
+
+// ─── Portfolio Page ────────────────────────────────────────────────────────────
+
+export const portfolioPage: PortfolioPageContent = {
+    badge: "✨ ผลงานของเรา",
+    title: "เว็บไซต์ที่",
+    titleHighlight: "เราสร้าง",
+    subtitle: "ตัวอย่างผลงานจริง หลากหลายประเภทธุรกิจ — ออกแบบสวย โหลดเร็ว พร้อม Mobile ทุก project",
+    backHome: "กลับหน้าหลัก",
+    viewLabel: "ดูผลงาน",
+    ctaTitle: "อยากได้เว็บสวยๆ แบบนี้บ้าง?",
+    ctaDesc: "ติดต่อเราเพื่อรับใบเสนอราคาฟรี ออกแบบ Custom ตามแบรนด์คุณ",
+    ctaButton: "สอบถามราคา & รายละเอียด",
+    filterAll: "ทั้งหมด",
+    stats: {
+        projectsValue: "5+",
+        projectsLabel: "ผลงาน",
+        responsiveLabel: "Responsive",
+        deliveryValue: "7+ วัน",
+        deliveryLabel: "ส่งมอบเร็ว",
+    },
+    projects: [
+        {
+            id: "pizzeria-hut-1",
+            title: "Pizzeria Hut 1",
+            category: "ร้านอาหาร",
+            categoryColor: "orange",
+            desc: "เว็บไซต์ร้านพิซซ่าไม้ในภูเก็ต สไตล์ Premium รองรับ 2 ภาษา ไทย-อังกฤษ-รัสเซีย พร้อมเมนูออนไลน์และการจองโต๊ะ",
+            image: "/ex-web/pizza.png",
+            tags: ["Restaurant", "Multi-language", "Menu", "Reservation"],
+            type: "Corporate",
+        },
+        {
+            id: "k-energy",
+            title: "K-Energy BESS",
+            category: "Corporate",
+            categoryColor: "teal",
+            desc: "เว็บบริษัทพลังงาน BESS ระบบกักเก็บพลังงาน สไตล์ Dark/Corporate ดีไซน์น่าเชื่อถือ รองรับ B2B",
+            image: "/ex-web/ek-energy.png",
+            tags: ["Corporate", "Energy", "B2B", "Dark Theme"],
+            type: "Corporate",
+        },
+        {
+            id: "home-service",
+            title: "แม่บ้านมืออาชีพ",
+            category: "Landing Page",
+            categoryColor: "green",
+            desc: "Landing Page บริการแม่บ้านรายชั่วโมง ออกแบบ Mobile-first ปิดการขายผ่าน LINE ได้ทันที",
+            image: "/ex-web/home-service.png",
+            tags: ["Landing Page", "Mobile-first", "LINE", "Service"],
+            type: "Landing Page",
+        },
+        {
+            id: "stockcontrol",
+            title: "StockControl System",
+            category: "Web App",
+            categoryColor: "blue",
+            desc: "ระบบจัดการสต็อกอุปกรณ์แต่งรถ TEAM Auto Sports — Login System, Dashboard, ระบบตรวจสอบสิทธิ์ความปลอดภัย",
+            image: "/ex-web/stockcontrol.png",
+            tags: ["Web App", "Dashboard", "Inventory", "Auth"],
+            type: "Web App",
+        },
+        {
+            id: "aemitez-portfolio",
+            title: "Aemitez_Dev Portfolio",
+            category: "Portfolio",
+            categoryColor: "purple",
+            desc: "Portfolio Website สำหรับ Web Developer + AI Integration แสดง Skill Radar Chart, Tech Stack และผลงาน",
+            image: "/ex-web/aemitez.github.png",
+            tags: ["Portfolio", "AI-Enhanced", "Next.js", "Chart"],
+            type: "Portfolio",
+        },
+    ],
 };
 
 // ─── Footer ────────────────────────────────────────────────────────────────────
