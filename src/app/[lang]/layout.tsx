@@ -46,6 +46,9 @@ export async function generateMetadata({ params }: { params: { lang: Locale } })
             index: true,
             follow: true,
         },
+        other: {
+            "facebook-domain-verification": "0w5t91qf5gzlk8wm7cwebwkqen2qss",
+        },
     };
 }
 
