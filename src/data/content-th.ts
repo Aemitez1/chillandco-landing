@@ -1,4 +1,4 @@
-import { BrandContent, HeroContent, HowItWorksContent, FeaturesContent, DashboardContent, KnowledgeBaseContent, AmbassadorContent, PricingContent, WebDesignContent, PageAdminContent, StatsContent, NavContent, FooterContent, CTAContent, BlogContent, SEOContent, PortfolioPageContent } from './content.types';
+import { BrandContent, HeroContent, HowItWorksContent, FeaturesContent, DashboardContent, KnowledgeBaseContent, AmbassadorContent, PricingContent, WebDesignContent, PageAdminContent, StatsContent, NavContent, FooterContent, CTAContent, BlogContent, SEOContent, PortfolioPageContent, PrivacyPolicyContent } from './content.types';
 /**
  * content.ts — Landing Page Content
  * Chill&Co Works: LINE OA AI Chatbot SaaS
@@ -644,6 +644,7 @@ export const footer: FooterContent = {
     links: [
         { label: "ติดต่อ Support", href: `mailto:${brand.supportEmail}` },
         { label: "LINE OA", href: brand.lineAddFriendUrl },
+        { label: "นโยบายความเป็นส่วนตัว", href: "/th/privacy-policy" },
     ],
     copyright: `© 2026 Chill&Co Studio. All rights reserved.`,
 };
@@ -686,6 +687,184 @@ export const seo: SEOContent = {
     ],
     blogTitle: "บทความ AI LINE OA | Chill&Co Works",
     blogDesc: "บทความและคู่มือสำหรับเจ้าของร้านที่ต้องการใช้ AI ตอบ LINE OA อัตโนมัติ — เคล็ดลับ วิธีตั้งค่า และเปรียบเทียบตัวเลือก"
+};
+
+// ─── Privacy Policy ───────────────────────────────────────────────────────────
+
+export const privacyPolicy: PrivacyPolicyContent = {
+    badge: "🔒 ความเป็นส่วนตัว",
+    pageTitle: "นโยบายความเป็นส่วนตัว",
+    subtitle: "Chill&Co Works ให้ความสำคัญกับความเป็นส่วนตัวของผู้ใช้ทุกคน เราโปร่งใสในการจัดการข้อมูลและปฏิบัติตามมาตรฐาน PDPA",
+    lastUpdatedLabel: "อัปเดตล่าสุด",
+    lastUpdatedDate: "14 พฤษภาคม 2568",
+    backHome: "กลับหน้าหลัก",
+    tocTitle: "สารบัญ",
+    seoTitle: "นโยบายความเป็นส่วนตัว | Chill&Co Works",
+    seoDesc: "อ่านนโยบายความเป็นส่วนตัวของ Chill&Co Works — ระบบ AI Sales Assistant สำหรับ LINE OA เพื่อทราบวิธีการจัดการและคุ้มครองข้อมูลส่วนบุคคลของคุณ",
+    sections: [
+        {
+            number: "1",
+            title: "บทนำ",
+            intro: "นโยบายความเป็นส่วนตัวนี้อธิบายถึงวิธีที่ Chill&Co Works จัดเก็บ ใช้ และคุ้มครองข้อมูลส่วนบุคคลของคุณเมื่อใช้บริการของเรา",
+            items: [
+                {
+                    title: "ชื่อบริการ",
+                    content: "Chill&Co Assistant — ระบบ AI Sales Assistant สำหรับ LINE OA",
+                },
+                {
+                    title: "ผู้ให้บริการ",
+                    content: "Chill&Co Works ดำเนินการโดยทีมพัฒนาไทย ติดต่อได้ที่ support@chillandcostudio.com",
+                },
+                {
+                    title: "เป้าหมายของนโยบาย",
+                    content: "นโยบายนี้จัดทำขึ้นเพื่อแจ้งให้ผู้ใช้ทราบถึงการจัดการข้อมูลส่วนบุคคลตามมาตรฐานสากลและพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล (PDPA) ของประเทศไทย และข้อกำหนดของ Meta (Facebook) และ LINE Platform",
+                },
+            ],
+        },
+        {
+            number: "2",
+            title: "ข้อมูลที่เราจัดเก็บ",
+            intro: "เราจัดเก็บข้อมูลเพียงเท่าที่จำเป็นสำหรับการให้บริการ โดยแบ่งเป็นประเภทดังนี้",
+            items: [
+                {
+                    title: "ข้อมูลจาก Social Media",
+                    content: "ข้อมูลที่ได้รับผ่าน API ได้แก่ ชื่อโปรไฟล์ LINE/Facebook, User ID, รูปโปรไฟล์ และรายชื่อเพจหรือ LINE OA ที่ได้รับอนุญาต",
+                },
+                {
+                    title: "ข้อมูลการติดต่อสื่อสาร",
+                    content: "เนื้อหาข้อความ (Chat Logs) ที่ลูกค้าพิมพ์โต้ตอบกับระบบบอท ซึ่งจำเป็นสำหรับการประมวลผลและตอบกลับด้วย AI",
+                },
+                {
+                    title: "ข้อมูลทางเทคนิค",
+                    content: "IP Address, ประเภทเบราว์เซอร์ และข้อมูล Log การใช้งานระบบ เพื่อใช้ในการวินิจฉัยปัญหาและรักษาความปลอดภัย",
+                },
+                {
+                    title: "ข้อมูลบัญชีผู้ใช้",
+                    content: "ข้อมูลที่คุณกรอกเมื่อสมัครใช้บริการ เช่น อีเมล ชื่อร้านค้า และข้อมูลสำหรับตั้งค่าระบบ AI ใน Dashboard",
+                },
+                {
+                    title: "ข้อมูลการชำระเงิน",
+                    content: "หากมีการชำระค่าบริการ เราใช้ Payment Gateway ของบุคคลที่สาม เราไม่จัดเก็บข้อมูลบัตรเครดิตหรือบัตรเดบิตไว้ในระบบของเราโดยตรง",
+                },
+            ],
+        },
+        {
+            number: "3",
+            title: "วัตถุประสงค์ในการใช้ข้อมูล",
+            intro: "ข้อมูลที่จัดเก็บถูกนำไปใช้เพื่อวัตถุประสงค์ดังต่อไปนี้เท่านั้น",
+            items: [
+                {
+                    title: "การให้บริการหลัก",
+                    content: "ใช้ข้อมูลเพื่อประมวลผลการโต้ตอบแชทอัตโนมัติ ตอบคำถามลูกค้า และส่งต่อแชทให้แอดมินเมื่อจำเป็น",
+                },
+                {
+                    title: "การประมวลผลด้วย AI",
+                    content: "ข้อความจากการสนทนาจะถูกส่งไปยัง Google Gemini API เพื่อวิเคราะห์ความหมายและสร้างคำตอบที่เหมาะสม โดยอยู่ภายใต้นโยบายความเป็นส่วนตัวของ Google",
+                },
+                {
+                    title: "การสนับสนุนลูกค้า",
+                    content: "ใช้ข้อมูล Log เพื่อตรวจสอบและแก้ไขปัญหาเมื่อระบบทำงานผิดพลาด",
+                },
+                {
+                    title: "การวิเคราะห์และพัฒนา",
+                    content: "นำข้อมูลภาพรวมที่ไม่สามารถระบุตัวตนได้ไปวิเคราะห์เพื่อพัฒนาฟีเจอร์และปรับปรุงคุณภาพบริการ",
+                },
+            ],
+        },
+        {
+            number: "4",
+            title: "การเปิดเผยข้อมูลแก่บุคคลที่สาม",
+            intro: "เราไม่ขาย จำหน่าย หรือแลกเปลี่ยนข้อมูลส่วนบุคคลของคุณกับบุคคลภายนอก ยกเว้นกรณีดังต่อไปนี้",
+            items: [
+                {
+                    title: "แพลตฟอร์มหลัก (LINE / Meta)",
+                    content: "ข้อมูลบางส่วนถูกส่งกลับไปยัง LINE Corporation หรือ Meta (Facebook) ตามช่องทางที่คุณใช้งาน ซึ่งอยู่ภายใต้นโยบายความเป็นส่วนตัวของแพลตฟอร์มนั้นๆ",
+                },
+                {
+                    title: "ผู้ให้บริการ AI (Google Gemini)",
+                    content: "เนื้อหาข้อความจากการสนทนาจะถูกส่งไปประมวลผลที่ Google Gemini API โดยอยู่ภายใต้นโยบายความเป็นส่วนตัวและข้อกำหนดการใช้งานของ Google",
+                },
+                {
+                    title: "ผู้ให้บริการ Payment Gateway",
+                    content: "ข้อมูลที่จำเป็นสำหรับการชำระเงินจะถูกส่งให้กับผู้ให้บริการ Payment Gateway ที่เราใช้งาน ซึ่งมีมาตรฐานความปลอดภัย PCI-DSS",
+                },
+                {
+                    title: "ข้อกำหนดทางกฎหมาย",
+                    content: "เราจะเปิดเผยข้อมูลก็ต่อเมื่อมีคำสั่งศาล หน่วยงานราชการ หรือข้อกำหนดทางกฎหมายบังคับให้ดำเนินการเท่านั้น",
+                },
+            ],
+        },
+        {
+            number: "5",
+            title: "การรักษาความปลอดภัยของข้อมูล",
+            intro: "เราใช้มาตรการทางเทคนิคและองค์กรที่เหมาะสมเพื่อปกป้องข้อมูลส่วนบุคคลของคุณ",
+            items: [
+                {
+                    title: "การเข้ารหัส (Encryption)",
+                    content: "ข้อมูลทุกอย่างที่รับส่งผ่านระบบของเราได้รับการป้องกันด้วยโปรโตคอล HTTPS/TLS เพื่อความปลอดภัยในการสื่อสาร",
+                },
+                {
+                    title: "การควบคุมการเข้าถึง (Access Control)",
+                    content: "ฐานข้อมูลมีการจำกัดสิทธิ์การเข้าถึงโดยเฉพาะ เฉพาะผู้ที่ได้รับอนุญาตเท่านั้นที่สามารถเข้าถึงข้อมูลได้",
+                },
+                {
+                    title: "ระยะเวลาการจัดเก็บ",
+                    content: "ข้อมูลการสนทนาจะถูกเก็บรักษาตลอดอายุการใช้งานบัญชี และจะถูกลบออกจากระบบภายใน 90 วันหลังจากยกเลิกบริการ หรือเมื่อได้รับคำขอจากผู้ใช้",
+                },
+            ],
+        },
+        {
+            number: "6",
+            title: "สิทธิ์ของผู้ใช้และการลบข้อมูล",
+            intro: "คุณมีสิทธิ์เต็มในการควบคุมข้อมูลส่วนบุคคลของตนเอง ตามที่กำหนดโดย PDPA และนโยบายของ Meta",
+            items: [
+                {
+                    title: "สิทธิ์การเข้าถึงข้อมูล",
+                    content: "คุณสามารถขอดูข้อมูลส่วนบุคคลที่เราจัดเก็บไว้ได้ทุกเวลา โดยส่งคำขอมาที่ support@chillandcostudio.com",
+                },
+                {
+                    title: "การขอแก้ไขหรือลบข้อมูล",
+                    content: "หากต้องการแก้ไข หรือลบข้อมูลส่วนบุคคล กรุณาส่งอีเมลมาที่ support@chillandcostudio.com ระบุชื่อบัญชีและข้อมูลที่ต้องการดำเนินการ เราจะดำเนินการภายใน 30 วันทำการ",
+                },
+                {
+                    title: "การถอนสิทธิ์แอป Facebook",
+                    content: "ไปที่ Facebook Settings → Security and Login → Apps and Websites → ค้นหา Chill&Co แล้วกด Remove เพื่อถอนสิทธิ์การเข้าถึง",
+                },
+                {
+                    title: "การถอนสิทธิ์ LINE",
+                    content: "สามารถบล็อกหรือยกเลิกการติดตาม LINE OA ได้ทุกเมื่อผ่านแอป LINE โดยตรง",
+                },
+                {
+                    title: "สิทธิ์ในการร้องเรียน",
+                    content: "หากเชื่อว่าสิทธิ์ด้านข้อมูลส่วนบุคคลของคุณถูกละเมิด คุณมีสิทธิ์ยื่นเรื่องร้องเรียนต่อสำนักงานคณะกรรมการคุ้มครองข้อมูลส่วนบุคคล (PDPC) ของประเทศไทย",
+                },
+            ],
+        },
+        {
+            number: "7",
+            title: "ข้อมูลการติดต่อ",
+            intro: "หากคุณมีคำถามหรือข้อสงสัยเกี่ยวกับนโยบายความเป็นส่วนตัวนี้ สามารถติดต่อเราได้ผ่านช่องทางดังนี้",
+            items: [
+                {
+                    title: "อีเมล (Privacy)",
+                    content: "support@chillandcostudio.com",
+                },
+                {
+                    title: "เว็บไซต์",
+                    content: "https://www.chillandcostudio.com",
+                },
+                {
+                    title: "LINE OA",
+                    content: "สามารถติดต่อผ่าน LINE OA ของเราได้โดยตรง เราพยายามตอบกลับภายใน 1 วันทำการ",
+                },
+            ],
+        },
+    ],
+    contactTitle: "ติดต่อฝ่าย Privacy",
+    contactEmail: "support@chillandcostudio.com",
+    contactWebsite: "https://www.chillandcostudio.com",
+    contactEmailLabel: "อีเมล",
+    contactWebsiteLabel: "เว็บไซต์",
 };
 
 export const floatingContact = {

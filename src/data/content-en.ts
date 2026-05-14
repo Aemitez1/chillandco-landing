@@ -16,6 +16,7 @@ import {
     CTAContent,
     BlogContent,
     SEOContent,
+    PrivacyPolicyContent,
 } from "./content.types";
 
 export const brand: BrandContent = {
@@ -624,6 +625,7 @@ export const footer: FooterContent = {
     links: [
         { label: "Contact Support", href: `mailto:${brand.supportEmail}` },
         { label: "LINE OA", href: brand.lineAddFriendUrl },
+        { label: "Privacy Policy", href: "/en/privacy-policy" },
     ],
     copyright: `© 2026 Chill&Co Studio. All rights reserved.`,
 };
@@ -664,6 +666,184 @@ export const seo: SEOContent = {
     ],
     blogTitle: "AI LINE OA Blog",
     blogDesc: "Articles and guides for shop owners wanting to use AI to automatically reply on LINE OA — tips, setup methods, and comparisons."
+};
+
+// ─── Privacy Policy ───────────────────────────────────────────────────────────
+
+export const privacyPolicy: PrivacyPolicyContent = {
+    badge: "🔒 Privacy",
+    pageTitle: "Privacy Policy",
+    subtitle: "Chill&Co Works is committed to protecting your privacy. We are transparent about how we handle your data and comply with PDPA and international standards.",
+    lastUpdatedLabel: "Last Updated",
+    lastUpdatedDate: "May 14, 2025",
+    backHome: "Back to Home",
+    tocTitle: "Table of Contents",
+    seoTitle: "Privacy Policy | Chill&Co Works",
+    seoDesc: "Read the Privacy Policy of Chill&Co Works — AI Sales Assistant for LINE OA. Learn how we collect, use, and protect your personal data.",
+    sections: [
+        {
+            number: "1",
+            title: "Introduction",
+            intro: "This Privacy Policy explains how Chill&Co Works collects, uses, and protects your personal information when you use our services.",
+            items: [
+                {
+                    title: "Service Name",
+                    content: "Chill&Co Assistant — AI Sales Assistant for LINE OA",
+                },
+                {
+                    title: "Service Provider",
+                    content: "Chill&Co Works, operated by a Thai development team. Contact us at support@chillandcostudio.com",
+                },
+                {
+                    title: "Purpose of This Policy",
+                    content: "This policy is designed to inform users about the management of personal data in accordance with international standards and the Personal Data Protection Act (PDPA) of Thailand, as well as the policies of Meta (Facebook) and LINE Platform.",
+                },
+            ],
+        },
+        {
+            number: "2",
+            title: "Data We Collect",
+            intro: "We collect only the data necessary to provide our services, categorized as follows:",
+            items: [
+                {
+                    title: "Social Media Data",
+                    content: "Data received via API including LINE/Facebook profile names, User IDs, profile photos, and authorized Page or LINE OA information.",
+                },
+                {
+                    title: "Communication Data",
+                    content: "Message content (Chat Logs) from customer interactions with the bot, which is required for AI processing and response generation.",
+                },
+                {
+                    title: "Technical Data",
+                    content: "IP addresses, browser types, and system usage logs for diagnostics and security purposes.",
+                },
+                {
+                    title: "Account Data",
+                    content: "Information you provide during registration such as email, store name, and AI configuration data entered in the Dashboard.",
+                },
+                {
+                    title: "Payment Data",
+                    content: "If you purchase a subscription, payments are processed via a third-party Payment Gateway. We do not store credit or debit card information directly in our systems.",
+                },
+            ],
+        },
+        {
+            number: "3",
+            title: "How We Use Your Data",
+            intro: "Data collected is used only for the following purposes:",
+            items: [
+                {
+                    title: "Core Service Delivery",
+                    content: "We use your data to process automated chat interactions, respond to customer inquiries, and hand off conversations to human admins when necessary.",
+                },
+                {
+                    title: "AI Processing",
+                    content: "Message content is sent to Google Gemini API for intent analysis and response generation, subject to Google's Privacy Policy and Terms of Service.",
+                },
+                {
+                    title: "Customer Support",
+                    content: "System logs are used to investigate and resolve issues when the system behaves unexpectedly.",
+                },
+                {
+                    title: "Analytics & Improvement",
+                    content: "Aggregated, anonymized data is used to analyze usage patterns and improve features and service quality.",
+                },
+            ],
+        },
+        {
+            number: "4",
+            title: "Third-Party Disclosure",
+            intro: "We do not sell, trade, or exchange your personal data with third parties, except in the following cases:",
+            items: [
+                {
+                    title: "Primary Platforms (LINE / Meta)",
+                    content: "Some data is relayed back to LINE Corporation or Meta (Facebook) based on the channel you use, governed by their respective Privacy Policies.",
+                },
+                {
+                    title: "AI Provider (Google Gemini)",
+                    content: "Conversation message content is sent to Google Gemini API for processing, subject to Google's Privacy Policy and Terms of Service.",
+                },
+                {
+                    title: "Payment Gateway Providers",
+                    content: "Data necessary for payment processing is shared with our Payment Gateway provider, which maintains PCI-DSS compliance.",
+                },
+                {
+                    title: "Legal Requirements",
+                    content: "We will only disclose your data when required by a court order, government authority, or applicable law.",
+                },
+            ],
+        },
+        {
+            number: "5",
+            title: "Data Security",
+            intro: "We implement appropriate technical and organizational measures to protect your personal data.",
+            items: [
+                {
+                    title: "Encryption",
+                    content: "All data transmitted through our systems is protected using HTTPS/TLS protocols to ensure secure communication.",
+                },
+                {
+                    title: "Access Control",
+                    content: "Our databases have strict access controls in place. Only authorized personnel can access personal data.",
+                },
+                {
+                    title: "Retention Period",
+                    content: "Conversation data is retained for the lifetime of your account and deleted within 90 days after account cancellation or upon your request.",
+                },
+            ],
+        },
+        {
+            number: "6",
+            title: "User Rights & Data Deletion",
+            intro: "You have full rights to control your personal data as defined by PDPA and Meta's policies.",
+            items: [
+                {
+                    title: "Right of Access",
+                    content: "You can request a copy of the personal data we hold about you at any time by emailing support@chillandcostudio.com.",
+                },
+                {
+                    title: "Right to Rectify or Delete",
+                    content: "To correct or delete your personal data, email support@chillandcostudio.com with your account name and the requested action. We will respond within 30 business days.",
+                },
+                {
+                    title: "Revoking Facebook App Access",
+                    content: "Go to Facebook Settings → Security and Login → Apps and Websites → Find Chill&Co and click Remove to revoke access.",
+                },
+                {
+                    title: "Revoking LINE Access",
+                    content: "You can block or unfollow our LINE OA at any time directly through the LINE app.",
+                },
+                {
+                    title: "Right to Complain",
+                    content: "If you believe your personal data rights have been violated, you have the right to file a complaint with Thailand's Personal Data Protection Committee (PDPC).",
+                },
+            ],
+        },
+        {
+            number: "7",
+            title: "Contact Information",
+            intro: "If you have any questions or concerns about this Privacy Policy, please contact us via the following channels:",
+            items: [
+                {
+                    title: "Privacy Email",
+                    content: "support@chillandcostudio.com",
+                },
+                {
+                    title: "Website",
+                    content: "https://www.chillandcostudio.com",
+                },
+                {
+                    title: "LINE OA",
+                    content: "You can contact us directly via our LINE OA. We aim to respond within 1 business day.",
+                },
+            ],
+        },
+    ],
+    contactTitle: "Contact Privacy Team",
+    contactEmail: "support@chillandcostudio.com",
+    contactWebsite: "https://www.chillandcostudio.com",
+    contactEmailLabel: "Email",
+    contactWebsiteLabel: "Website",
 };
 
 export const floatingContact = {
