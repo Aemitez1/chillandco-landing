@@ -24,7 +24,7 @@ export const brand: BrandContent = {
     description: "An intelligent AI system that responds to customers on your behalf 24/7. Easy to connect, no code required, complete with a Real-time Dashboard.",
     url: "https://www.chillandcostudio.com",
     logoPath: "/logo.jpg",
-    lineAddFriendUrl: "https://line.me/R/ti/p/@623arqyi",
+    lineAddFriendUrl: "https://line.me/R/ti/p/@chillandco",
     supportEmail: "support@chillandcostudio.com",
 };
 

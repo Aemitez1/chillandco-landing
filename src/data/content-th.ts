@@ -16,7 +16,7 @@ export const brand: BrandContent = {
         "ระบบ AI อัจฉริยะที่ตอบลูกค้าใน LINE OA แทนคุณ 24/7 เชื่อมต่อง่าย ไม่ต้องเขียนโค้ด พร้อม Dashboard จัดการลูกค้าแบบ Real-time",
     url: "https://www.chillandcostudio.com",
     logoPath: "/logo.jpg",
-    lineAddFriendUrl: "https://line.me/R/ti/p/@623arqyi",
+    lineAddFriendUrl: "https://line.me/R/ti/p/@chillandco",
     supportEmail: "support@chillandcostudio.com",
 };
 
