@@ -1,4 +1,4 @@
-import { BrandContent, HeroContent, HowItWorksContent, FeaturesContent, DashboardContent, KnowledgeBaseContent, AmbassadorContent, PricingContent, WebDesignContent, PageAdminContent, StatsContent, NavContent, FooterContent, CTAContent, BlogContent, SEOContent, PortfolioPageContent, PrivacyPolicyContent } from './content.types';
+import { BrandContent, HeroContent, HowItWorksContent, FeaturesContent, DashboardContent, KnowledgeBaseContent, AmbassadorContent, PricingContent, WebDesignContent, PageAdminContent, StatsContent, NavContent, FooterContent, CTAContent, BlogContent, SEOContent, PortfolioPageContent, PrivacyPolicyContent, TermsOfServiceContent } from './content.types';
 /**
  * content.ts — Landing Page Content
  * Chill&Co Works: LINE OA AI Chatbot SaaS
@@ -645,6 +645,7 @@ export const footer: FooterContent = {
         { label: "ติดต่อ Support", href: `mailto:${brand.supportEmail}` },
         { label: "LINE OA", href: brand.lineAddFriendUrl },
         { label: "นโยบายความเป็นส่วนตัว", href: "/th/privacy-policy" },
+        { label: "ข้อกำหนดการใช้งาน", href: "/th/terms-of-service" },
     ],
     copyright: `© 2026 Chill&Co Studio. All rights reserved.`,
 };
@@ -796,6 +797,29 @@ export const privacyPolicy: PrivacyPolicyContent = {
         },
         {
             number: "5",
+            title: "สิทธิ์และการอนุญาต Meta ที่เราขอ",
+            intro: "เราขอสิทธิ์ Meta เฉพาะที่จำเป็นต่อการทำงานหลักของระบบเท่านั้น",
+            items: [
+                {
+                    title: "pages_messaging",
+                    content: "ใช้สำหรับอ่านและส่งข้อความผ่าน Facebook Messenger ในนามของเพจที่ผู้ใช้งานให้สิทธิ์",
+                },
+                {
+                    title: "pages_read_engagement",
+                    content: "ใช้สำหรับอ่านข้อมูลพื้นฐานของเพจ (ชื่อ, สถานะ) เพื่อแสดงใน Dashboard",
+                },
+                {
+                    title: "instagram_manage_messages",
+                    content: "ใช้สำหรับอ่านและตอบกลับข้อความ Instagram Direct (DM) ในนามของบัญชี Instagram Business ที่เชื่อมต่อ",
+                },
+                {
+                    title: "การจัดเก็บ Access Token",
+                    content: "Meta Page Access Token ถูกจัดเก็บในรูปแบบเข้ารหัสบนเซิร์ฟเวอร์ของเรา และจะไม่ถูกเปิดเผยให้ผู้ใช้รายอื่นเห็นเด็ดขาด",
+                },
+            ],
+        },
+        {
+            number: "6",
             title: "การรักษาความปลอดภัยของข้อมูล",
             intro: "เราใช้มาตรการทางเทคนิคและองค์กรที่เหมาะสมเพื่อปกป้องข้อมูลส่วนบุคคลของคุณ",
             items: [
@@ -814,7 +838,7 @@ export const privacyPolicy: PrivacyPolicyContent = {
             ],
         },
         {
-            number: "6",
+            number: "7",
             title: "สิทธิ์ของผู้ใช้และการลบข้อมูล",
             intro: "คุณมีสิทธิ์เต็มในการควบคุมข้อมูลส่วนบุคคลของตนเอง ตามที่กำหนดโดย PDPA และนโยบายของ Meta",
             items: [
@@ -841,7 +865,7 @@ export const privacyPolicy: PrivacyPolicyContent = {
             ],
         },
         {
-            number: "7",
+            number: "8",
             title: "ข้อมูลการติดต่อ",
             intro: "หากคุณมีคำถามหรือข้อสงสัยเกี่ยวกับนโยบายความเป็นส่วนตัวนี้ สามารถติดต่อเราได้ผ่านช่องทางดังนี้",
             items: [
@@ -865,6 +889,100 @@ export const privacyPolicy: PrivacyPolicyContent = {
     contactWebsite: "https://www.chillandcostudio.com",
     contactEmailLabel: "อีเมล",
     contactWebsiteLabel: "เว็บไซต์",
+};
+
+// ─── Terms of Service ──────────────────────────────────────────────────────────
+
+export const termsOfService: TermsOfServiceContent = {
+    badge: "⚖️ ข้อกำหนดการใช้งาน",
+    pageTitle: "ข้อกำหนดการใช้งาน",
+    subtitle: "กฎและข้อตกลงสำหรับการใช้งานระบบ AI Sales Assistant ของ Chill&Co Works",
+    lastUpdatedLabel: "อัปเดตล่าสุด",
+    lastUpdatedDate: "1 ตุลาคม 2569",
+    backHome: "กลับหน้าหลัก",
+    tocTitle: "สารบัญ",
+    sections: [
+        {
+            number: "1",
+            title: "ขอบเขตการให้บริการ",
+            intro: "ระบบ Chill&Co Works ออกแบบมาเพื่อทำหน้าที่เป็นผู้ช่วยตอบแชทบน LINE OA โดยใช้เทคโนโลยี AI ช่วยในการให้ข้อมูลและรับออเดอร์",
+            items: [
+                {
+                    title: "วัตถุประสงค์การใช้งาน",
+                    content: "คุณตกลงใช้ระบบนี้เพื่อการสื่อสารทางธุรกิจกับลูกค้าบน LINE OA เท่านั้น ห้ามใช้เพื่อวัตถุประสงค์ที่ผิดกฎหมายหรือขัดต่อศีลธรรมอย่างเด็ดขาด",
+                },
+                {
+                    title: "การทำงานของ AI",
+                    content: "แม้ว่า AI จะได้รับการออกแบบให้ตอบได้อย่างแม่นยำ แต่เราไม่สามารถรับประกันความถูกต้อง 100% ในทุกสถานการณ์ได้ ผู้ใช้ควรติดตามและตั้งค่า Auto Handover (สลับเป็นโหมดแอดมิน) เพื่อป้องกันข้อผิดพลาดในสถานการณ์ซับซ้อน",
+                },
+            ],
+        },
+        {
+            number: "2",
+            title: "สิ่งที่ห้ามกระทำ",
+            intro: "ผู้ใช้ต้องปฏิบัติตามข้อห้ามต่อไปนี้อย่างเคร่งครัด หากพบว่ามีการฝ่าฝืน เราขอสงวนสิทธิ์ระงับการให้บริการทันที",
+            items: [
+                {
+                    title: "ห้ามส่งสแปม",
+                    content: "ห้ามใช้บอทเพื่อส่งข้อความรบกวน โฆษณาชวนเชื่อ หรือสแปมไปยังบุคคลอื่นโดยไม่ได้รับอนุญาต",
+                },
+                {
+                    title: "ห้ามกระทำผิดกฎหมาย",
+                    content: "ห้ามใช้ระบบเพื่อหลอกลวง ฉ้อโกง เผยแพร่ข้อมูลเท็จ หรือกระทำการใดๆ ที่ฝ่าฝืนกฎหมายหรือข้อกำหนดของ LINE Corporation",
+                },
+                {
+                    title: "ห้ามแฮ็กระบบ",
+                    content: "ห้ามพยายามแฮ็ก ทำ Reverse Engineering หรือกระทำการใดๆ ที่อาจสร้างความเสียหายต่อเซิร์ฟเวอร์หรือโครงสร้างพื้นฐานของ Chill&Co Works",
+                },
+            ],
+        },
+        {
+            number: "3",
+            title: "นโยบายการใช้งานที่เหมาะสม",
+            intro: "เพื่อให้ระบบสามารถให้บริการผู้ใช้ทุกรายได้อย่างมีประสิทธิภาพและเสถียร เรามีนโยบายการใช้งานดังนี้",
+            items: [
+                {
+                    title: "ขีดจำกัดการใช้งาน",
+                    content: "การส่งข้อความผ่าน AI จะถูกจำกัดตามแพ็กเกจที่คุณเลือก หากมีการใช้งานสูงผิดปกติจนส่งผลกระทบต่อระบบโดยรวม เราอาจพิจารณาจำกัดอัตราการใช้หรือระงับการใช้งานชั่วคราว",
+                },
+            ],
+        },
+        {
+            number: "4",
+            title: "การจำกัดความรับผิด",
+            items: [
+                {
+                    title: "ความรับผิดชอบต่อเนื้อหา",
+                    content: "Chill&Co Studio จะไม่รับผิดชอบต่อความเสียหายใดๆ ที่เกิดจากข้อมูลที่ AI ให้ไม่ถูกต้อง หรือจากการนำข้อมูลที่ AI สร้างขึ้นไปใช้ต่อ",
+                },
+                {
+                    title: "การหยุดชะงักของระบบ",
+                    content: "เราจะพยายามรักษาให้ระบบพร้อมใช้งานตลอด 24/7 แต่ไม่สามารถรับประกันความต่อเนื่องได้ เราจะไม่รับผิดชอบต่อความเสียหายที่เกิดจากการหยุดชะงักของบริการ ไม่ว่าจะมาจากเซิร์ฟเวอร์ของเราหรือ API บุคคลที่สาม (เช่น LINE และ Google)",
+                },
+            ],
+        },
+        {
+            number: "5",
+            title: "การยกเลิกบริการ",
+            items: [
+                {
+                    title: "การยกเลิกโดยผู้ใช้",
+                    content: "คุณสามารถยกเลิกบริการได้ทุกเมื่อโดยแจ้งให้เราทราบก่อนรอบการเรียกเก็บเงินถัดไป จะไม่มีการคืนเงินสำหรับรอบที่ชำระไปแล้ว",
+                },
+                {
+                    title: "การยกเลิกโดยผู้ให้บริการ",
+                    content: "เราขอสงวนสิทธิ์ยกเลิกหรือระงับบัญชีผู้ใช้ทันที หากพบว่าผู้ใช้ฝ่าฝืนข้อกำหนดการใช้งานฉบับนี้",
+                },
+            ],
+        },
+    ],
+    contactTitle: "ติดต่อเรา",
+    contactEmail: "support@chillandcostudio.com",
+    contactWebsite: "https://www.chillandcostudio.com",
+    contactEmailLabel: "อีเมล",
+    contactWebsiteLabel: "เว็บไซต์",
+    seoTitle: "ข้อกำหนดการใช้งาน | Chill&Co Works",
+    seoDesc: "ข้อกำหนด กฎ และเงื่อนไขสำหรับการใช้งานระบบ AI Sales Assistant ของ Chill&Co Works",
 };
 
 export const floatingContact = {

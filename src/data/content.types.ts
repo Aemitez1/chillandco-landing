@@ -244,6 +244,36 @@ export interface PrivacyPolicyContent {
     seoDesc: string;
 }
 
+export interface TermsOfServiceItem {
+    title: string;
+    content: string;
+}
+
+export interface TermsOfServiceSection {
+    number: string;
+    title: string;
+    intro?: string;
+    items: TermsOfServiceItem[];
+}
+
+export interface TermsOfServiceContent {
+    badge: string;
+    pageTitle: string;
+    subtitle: string;
+    lastUpdatedLabel: string;
+    lastUpdatedDate: string;
+    backHome: string;
+    tocTitle: string;
+    sections: TermsOfServiceSection[];
+    contactTitle: string;
+    contactEmail: string;
+    contactWebsite: string;
+    contactEmailLabel: string;
+    contactWebsiteLabel: string;
+    seoTitle: string;
+    seoDesc: string;
+}
+
 export interface PortfolioProject {
     id: string;
     title: string;
@@ -295,6 +325,7 @@ export interface ContentDictionary {
     blog: BlogContent;
     seo: SEOContent;
     privacyPolicy: PrivacyPolicyContent;
+    termsOfService: TermsOfServiceContent;
     floatingContact: { ariaLabel: string };
 }
 
