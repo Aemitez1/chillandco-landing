@@ -675,7 +675,7 @@ export const blog: BlogContent = {
 
 export const seo: SEOContent = {
     defaultTitle: "Chill&Co Works — AI Sales Assistant สำหรับ LINE OA",
-    defaultDesc: "ระบบ AI ตอบลูกค้า LINE OA อัตโนมัติ 24/7 ไม่ต้องเขียนโค้ด พร้อม Dashboard จัดการ Real-time",
+    defaultDesc: "ระบบ AI ตอบลูกค้า LINE OA อัตโนมัติ 24/7 ไม่ต้องเขียนโค้ด พร้อม Dashboard จัดการ Real-time / ระบบช่วยการขายของออนไลน์",
     keywords: [
         "LINE OA",
         "AI Chatbot",
@@ -685,6 +685,7 @@ export const seo: SEOContent = {
         "AI ตอบแชท",
         "LINE OA AI",
         "Chill&Co Works",
+        "ระบบช่วยการขายของออนไลน์",
     ],
     blogTitle: "บทความ AI LINE OA | Chill&Co Works",
     blogDesc: "บทความและคู่มือสำหรับเจ้าของร้านที่ต้องการใช้ AI ตอบ LINE OA อัตโนมัติ — เคล็ดลับ วิธีตั้งค่า และเปรียบเทียบตัวเลือก"
