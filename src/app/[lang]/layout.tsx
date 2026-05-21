@@ -66,6 +66,23 @@ export default async function RootLayout({
     const dict = await getDictionary(params.lang);
     const brand = dict.brand;
     
+    // Organization Schema - บอก Google ว่าชื่อแบรนด์คืออะไร
+    const organizationSchema = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": brand.name,
+        "alternateName": "Chill&Co Works",
+        "url": brand.url,
+        "logo": `${brand.url}${brand.logoPath}`,
+        "description": brand.description,
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": brand.supportEmail,
+            "contactType": "customer support"
+        },
+        "sameAs": [brand.lineAddFriendUrl]
+    };
+
     const softwareAppSchema = {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
@@ -84,6 +101,10 @@ export default async function RootLayout({
     return (
         <html lang={params.lang} className={`${inter.variable} ${notoSansThai.variable}`}>
             <head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+                />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}

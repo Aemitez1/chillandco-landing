@@ -25,7 +25,7 @@ export const brand: BrandContent = {
 export const hero: HeroContent = {
     headlineHtml: 'ให้ AI ตอบลูกค้า LINE <br className="hidden md:block" />\n<span className="text-gradient">แทนคุณ 24 ชั่วโมง</span>',
     description:
-        "Chill&Co Works คือระบบ AI Sales Assistant สำหรับ LINE OA ที่ช่วยตอบคำถาม ปิดการขาย และส่งต่อแอดมินอัตโนมัติ — พร้อม Dashboard สำหรับติดตามลูกค้าแบบ Real-time",
+        "Chill&Co Works / ระบบช่วยการขายของออนไลน์ คือระบบ AI Sales Assistant สำหรับ LINE OA ที่ช่วยตอบคำถาม ปิดการขาย และส่งต่อแอดมินอัตโนมัติ — พร้อม Dashboard สำหรับติดตามลูกค้าแบบ Real-time",
     cta: {
         primary: { label: "เพิ่มเพื่อน LINE OA", url: brand.lineAddFriendUrl },
         secondary: { label: "ดูฟีเจอร์ทั้งหมด", url: "#features" },
@@ -674,7 +674,7 @@ export const blog: BlogContent = {
 };
 
 export const seo: SEOContent = {
-    defaultTitle: "Chill&Co Works — AI Sales Assistant สำหรับ LINE OA",
+    defaultTitle: "Chill&Co Works — AI Sales Assistant สำหรับ LINE OA / ระบบช่วยการขายของออนไลน์",
     defaultDesc: "ระบบ AI ตอบลูกค้า LINE OA อัตโนมัติ 24/7 ไม่ต้องเขียนโค้ด พร้อม Dashboard จัดการ Real-time / ระบบช่วยการขายของออนไลน์",
     keywords: [
         "LINE OA",
